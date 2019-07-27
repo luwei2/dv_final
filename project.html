@@ -1,25 +1,16 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>H1B Employment Analysis</title>
+    <title>Visitor Dashboard</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,300,900,100' rel='stylesheet'
           type='text/css'>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script type="text/javascript" src="js/jquery.bootpag.min.js"></script>
-    <script type="text/javascript" src="js/handlebars-v4.0.10.js"></script>
-    <script type="text/javascript" src="js/d3-scale-chromatic.v0.3.min.js"></script>
-    <script type="text/javascript" src="js/accounting.min.js"></script>
-    <script src="lib/util/box.js"></script>
-    <script src="lib/part1.js"></script>
-    <script src="lib/part2.js"></script>
-    <script src="lib/part3.js"></script>
-    <script src="lib/part5.js"></script>
-    <script src="lib/part6.js"></script>
-    <script src="lib/map.js"></script>
-    <script src="lib/median_wage.js"></script>
+    <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="lib/app.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
@@ -28,53 +19,140 @@
 		 H1B Employment Analysis (2011 - 2016)
     </div>
 </div>
-	
+
 <div id="exTab" class="container">
-    <div class="row">
-        <div class="col-md-4 custom_padding">
-            <div class="bg">
-                <div class="title-header">
-                    <div>
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination" id="pagination">
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div style="margin: auto;" id="left_panel">
-                    <div style="width: 100%;height: 250px;padding:10px 20px 20px 20px" id="left_summary" >
-                    </div>
-                    <div style="width: 100%;height: 100%" id="bottom_chart">
-                        <div class="panel-header">
-                            <div class="pull-left heading-style" id="bottom_header" style="font-size: 14px">
-                                Top 5 H1B Applicants (2011-2016)
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a href="#1" data-toggle="tab">Dashboard</a>
+        </li>
+        <li>
+            <a href="#2" data-toggle="tab">Description</a>
+        </li>
+    </ul>
+    <div class="tab-content" style="padding-top: 10px">
+        <div class="tab-pane active" id="1">
+                <div class="row">
+                    <div class="col-md-6 custom_padding">
+                        <div class="bg">
+                            <div class="panel-header">
+                                <div class="pull-left heading-style"
+                                     >Top 5 H1B
+                                    Applicants are Outsourcing Companies (2011- 2016)
+                                </div>
+                            </div>
+                            <div style="margin: auto;" id="div1">
+                                <svg height="370" id="haoe">
+
+                                </svg>
                             </div>
                         </div>
-                        <div style="margin: auto;" id="div_sub">
-                            <svg height="250" id="svg_sub">
-                            </svg>
+                    </div>
+                    <div class="col-md-6 custom_padding">
+                        <div class="bg">
+                            <div class="panel-header">
+                                <div class="pull-left heading-style"
+                                     >Top 5 H1B Applicants among Product Companies (2011- 2016)
+                                </div>
+                                <div class="pull-right" style="line-height: 30px">
+                            <span style="color:#7f7f85;padding-right:0;">
+                                <svg width="10" height="10">
+                                    <circle cx="5" cy="5" r="5" fill="#e58c72"/>
+                                </svg>
+
+                                <span id="toggleScale" style="cursor: pointer;color:#337ab7">Toggle Range</span></span>
+
+                                </div>
+
+                            </div>
+                            <div style="margin: auto;" id="div2">
+                                <svg height="370" id="hase">
+
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-8 custom_padding">
-            <div class="bg">
-                <div class="panel-header">
-                    <div class="pull-left heading-style" id="main_header">
-                        Top 5 H1B Applicants (2011-2016)
+                <div class="row">
+                    <div class="col-md-12 custom_padding">
+                        <div class="bg" style="height: 500px">
+                            <div class="panel-header">
+                                <div class="pull-left"
+                                     style="color:#515154;font-size: 1.15em;line-height:30px;font-weight: 600">Wage
+                                    Distribution of 2016 H1B Applications - Outsourcing vs Product Companies (Top 5)
+                                </div>
+                            </div>
+                            <div style="margin: auto;height: 420px" id="myDiv3">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div id="content_main">
-                    <div style="margin: auto;" id="div_main">
-                        <svg height="540" id="svg_main">
 
-                        </svg>
-                    </div>
-                </div>
+        </div>
+        <div class="tab-pane" id="2">
+            <div style="padding: 20px;color:#333">
+                <p><strong><span style="font-size: 10pt;">Questions:&nbsp;</span></strong></p>
+                <ol>
+                    <li style="padding-left: 30px;"><span style="font-size: 10pt;">Which companies are the top 5 Applicants of H1B Visa between 2011- 2016 ? Are all of them Outsourcing companies ?</span></li>
+                    <li style="padding-left: 30px;"><span style="font-size: 10pt;">Which Product Companies are top H1B Applicants between 2011- 2016 ? How comparable they are with the top applicants (Outsourcing companies) ?</span></li>
+                    <li style="padding-left: 30px;"><span style="font-size: 10pt;">Is there any common trend ?</span></li>
+                    <li style="padding-left: 30px;"><span style="font-size: 10pt;">In 2016, how the median wage differs between the Outsourcing companies and Product Companies ?</span></li>
+                </ol>
+                <p><span style="font-size: 10pt;"><strong>Data:</strong></span></p>
+                <p><span style="font-size: 10pt;">The data is taken from following public domain:</span></p>
+                <p><span style="font-size: 10pt;"><a title="https://www.kaggle.com/nsharan/h-1b-visa/downloads/h-1b-visa.zip" href="https://www.kaggle.com/nsharan/h-1b-visa/downloads/h-1b-visa.zip">https://www.kaggle.com/nsharan/h-1b-visa/downloads/h-1b-visa.zip</a></span></p>
+                <p><span style="font-size: 10pt;"><strong>Tools Used to build the charts:</strong></span></p>
+                <p><span style="font-size: 10pt;">Prof. Hart confirmed that students may use any tool. Here is the link to the details.</span></p>
+                <p><span style="font-size: 10pt;"><a title="https://piazza.com/class/j1rmndzjbmk7nm?cid=71" href="https://piazza.com/class/j1rmndzjbmk7nm?cid=71" target="_blank" rel="noopener">https://piazza.com/class/j1rmndzjbmk7nm?cid=71</a></span></p>
+                <p>&nbsp;</p>
+                <p>&nbsp;<strong><span style="font-size: 10pt;">Does the dashboard contain two or more charts?</span></strong></p>
+                <p style="padding-left: 30px;"><span style="font-size: 10pt;">Yes</span></p>
+                <p><strong><span style="font-size: 10pt;">Are the chart types (e.g., bar, line, scatterplot) appropriately chosen with respect to the kind of data shown (e.g., categorical vs. quantitative, continuous vs. discrete)?</span></strong></p>
+                <ul>
+                    <li><strong><span style="font-size: 10pt;">Chart 1 &amp; 2 - Grouped Bar Chart:</span></strong>
+                        <ul>
+                            <li><span style="font-size: 10pt;">The first &amp; second charts are Grouped Bar chart where the height of the bar indicates the number of H1B application (<strong>quantitative</strong>)&nbsp;filed by each company for 6 different years (<strong>categorical</strong>).</span></li>
+                        </ul>
+                    </li>
+                    <li><span style="font-size: 10pt;"><span style="font-size: 10pt;"><strong>Chart 3&nbsp;- Box Plot:</strong></span></span>
+                        <ul>
+                            <li><span style="font-size: 10pt;">The Box plot displays the median wage of 2016 applications for each complany. The Box Plot is choosen for showing distribution of wage data. </span></li>
+                            <li><span style="font-size: 10pt;">Since there are two types of companies (<strong>categorical</strong>), they are color coded in two groups ( red &amp; blue ) &nbsp;</span></li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong><span style="font-size: 10pt;">Are the axes and legends appropriately labeled?</span></strong></p>
+                <p style="padding-left: 30px;"><span style="font-size: 10pt;">Yes</span></p>
+                <p><strong><span style="font-size: 10pt;">Are effective color palettes chosen?</span></strong></p>
+                <ul>
+                    <li><strong><span style="font-size: 10pt;">Chart 1 &amp; 2 : </span></strong>
+                        <ul>
+                            <li><span style="font-size: 10pt;">Color palette has been choosen based on the years (<strong>categorical</strong>). It is to differenciate the data for each year.</span></li>
+                        </ul>
+                    </li>
+                    <li><span style="font-size: 10pt;"><span style="font-size: 10pt;"><strong>Chart 3&nbsp;:</strong></span></span>
+                        <ul>
+                            <li><span style="font-size: 10pt;">Since there are two types of companies (<strong>categorical</strong>), they are color coded in two groups ( red &amp; blue ).</span></li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong><span style="font-size: 10pt;">Is the data shown in the context of an overview?</span></strong></p>
+                <ul>
+                    <li><span style="font-size: 10pt;">On mouse over all the Charts displays exact data points</span></li>
+                    <li><span style="font-size: 10pt;">The first chart shows that the Outsourcing companies are the highest applicants of H1B Visa for past 6 years ( 2011 - 1016 ). <strong>[Question 1]</strong></span></li>
+                    <li><span style="font-size: 10pt;">The 2nd chart shows the name of the Product companies with highest number of&nbsp;H1B Application&nbsp;for past 6 years ( 2011 - 1016 ).&nbsp;<strong>[Question 2 - part 1]</strong></span></li>
+                    <li><span style="font-size: 10pt;">User can click on the "Toggle Range" link to reset the y-axis range as per the data.</span></li>
+                    <li><span style="font-size: 10pt;">The 2nd chart initially has the y-axis range same as the 1st chart, so that the data can be visually compared. We can see here that the number of H1B applications by the Product companies are much lesser than the Outsourcing Companies.<strong>[Question 2 - part 2]</strong></span></li>
+                    <li><span style="font-size: 10pt;">The first and second charts also indicates that each year the number of H1B applications have gone up specially amoung the Outsourcing Companies.&nbsp;<strong>[Question 3]</strong></span></li>
+                    <li><span style="font-size: 10pt;">The 3rd Chart shows the wage distributions of all 10 companies in 2016.&nbsp;</span></li>
+                    <li><span style="font-size: 10pt;">The Outsourcing companies in blue and Product Companies are in Red color.</span></li>
+                    <li><span style="font-size: 10pt;">There is a line in blue, indicating the median wage of all Outsourcing companies and another line in red,&nbsp;indicating the median wage of all&nbsp;Product Companies.</span></li>
+                    <li><span style="font-size: 10pt;">This clearly shows the median wage of the top 5 Outsourcing companies are around $30K less than the top 5&nbsp;Product Companies in 2016.[<strong>Question 4]</strong></span></li>
+                </ul>
             </div>
         </div>
     </div>
 </div>
+<script type="text/babel" src="lib/app.jsx"></script>
+
 </body>
 </html>
