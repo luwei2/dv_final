@@ -1,1322 +1,431 @@
 <html>
-	<head>
-		<link rel="stylesheet" href="style.css">
-		<script src="https://d3js.org/d3.v4.min.js"></script>
-		<script src="jquery-1.11.3.js"></script>
-		<script src="jquery.fullPage.min.js"></script>
-		<link rel="stylesheet" href="jquery.fullPage.css">
-		<link href="https://fonts.googleapis.com/css?family=Raleway|Oxigen|Open+Sans" rel="stylesheet">
-	</head>
-	<body>
-		<div id="wrapper">
-			<div class="section" id="sectionImage1" style="width:100%; height:100%; padding-left:3%; padding-right:1.5%;">
-				<div style="float: left; width: 47%;">
-					<div style="font-size: 80px; font-weight: bold; color:#1a1a1a;">Fertility Rate<br/></div>
-					<p style="font-size: 33.5px; -webkit-margin-before: 0.2em; -webkit-margin-after: 0.2em; color:#404040;">A curious case of correlations</p><br/><br/>
-					<div class="bodyText"><div style="font-size: 16px; font-weight: bold; color:#1a1a1a;">What&#39;s Fertility Rate? </div></br>
-					“Number of children that would be born to a woman if she were to live to the end of her childbearing years.” (World Bank)</br></br>
-					<div style="font-size: 16px; font-weight: bold; color:#1a1a1a;">What are the questions? </div></br>
-					&nbsp;&nbsp;&nbsp;&nbsp;1.	Does Fertility Rate impact economy and happiness?</br>
-					&nbsp;&nbsp;&nbsp;&nbsp;2.	Is it religion related to Fertility Rate?</br></br>
-					<div style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Why?</div></br>
-					If Fertility Rate impacts people&#39;s happiness and economy, then an incentive exists to reduce Fertility Rate on poor and unhappy countries.</br></br>
-					If religion has an impact on Fertility Rate, then governments should consider become secular states to avoid religion dealing with anticonceptive methods and sexual education.</br></br>
-					<div style="font-size: 16px; font-weight: bold; color:#1a1a1a;">What about this visualization?</div></br>
-					Over the next few slides you&#39;ll have the opportunity to draw your own conclusion. Explore the data and play with it. This is just a curious case of correlations.</div>
-				</div>
-			</div>
-			<div class="section" style="width:100%; height:100%; padding-left:3%; padding-right:1%;">
-				<div style="float: right; width: 70%; text-align: center;">
-					<div style="padding-right: 140px; font-size: 20px; font-weight: bold;">Fertility Rate by region<br/></div>
-					<svg id="byCountryFertilityRate" width="800" height="500"></svg>
-				</div>
-				<div style="float: left; width: 30%;">
-					<p style="font-size: 60px; font-weight: bold; color:#1a1a1a;">An overview<br/></p>
-					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Filter and conquer</p>
-					<p class="bodyText">Let&#39;s start by understanding the evolution of Fertility Rate over time. It looks like Fertility Rate has steadily decreased. Africa is the only exception.</p>
-					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">What can you do?</p>
-					<p class="bodyText">Filter by clicking on any element in the legend. Use the brushing bar at the bottom by holding any of the two extremes and moving the context bar from left to right and viceversa. Use each point&#39;s tooltip to get detailed information, just hover over the points in the graph.</p>
-				</div>			
-			</div>
-			<div class="section" style="width:100%; height:100%; padding-left:2.5%; padding-right:7%;">
-				<div style="float: left; width: 70%;">
-					<div style="padding-left: 140px; font-size: 20px; font-weight: bold;">Fertility Rate and GDP per capita in <span id="title">1960</span><br/><br/></div>
-					<div style="padding-left: 55px;">
-						<button name="play" id="play">Play</button>&nbsp;&nbsp;&nbsp;&nbsp;
-						<input id="slider" style="width:400px;" type="range" min="1960" max="2015" value="1960" step="1" />
-						<span id="range">1960</span><br/><br/>
-					</div>
-					<svg id="FertilityRateVsGDP" width="800" height="450"></svg>
-				</div>
-				<div style="float: right; width: 30%;">
-					<p style="font-size: 60px; font-weight: bold; color:#1a1a1a;">Economy<br/></p>
-					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Explore over time</p>
-					<p class="bodyText">Now that you have seen an overview of Fertility Rate behavior over time, take this opportunity to dive deeper on the relation between Fertility Rate and GDP per capita from 1960 to 2015. It looks like there is a correlation between these two elements, year by year GDP per capita grows and Fertility Rate diminishes. There is a concerning situation in Africa, where Fertility Rate is pretty high and GDP per capita pretty low. What do you think? Draw your own inferences.</p>
-					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">What can you do?</p>
-					<p class="bodyText">Filter by clicking on any element in the legend. You can also see an animation year by year by clicking on Play button or just move the slider to inspect a specific year. You can also check each point&#39;s tooltip to get a deeper insight. The size of the circles is proportional to GDP per capita to remark the difference in the graph.</p>
-				</div>
-			</div>
-			<div class="section" style="width:100%; height:100%; padding-left:3%; padding-right:1%;">
-				<div style="float: right; width: 70%; text-align: center;">
-					<div style="padding-right: 140px; font-size: 20px; font-weight: bold;">Fertility Rate and Hapiness Score in 2015<br/></div>
-					<svg id="FertilityRateVsHapiness" width="800" height="500"></svg>
-				</div>
-				<div style="float: left; width: 30%;">
-					<p style="font-size: 60px; font-weight: bold; color:#1a1a1a;">Happiness<br/></p>
-					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Are you happy?</p>
-					<p class="bodyText">Alright, enough GDP per capita. Let&#39;s now compare Fertility Rate with Happiness Score in 2015. At some point of low values of Fertility Rate people have different levels of happiness, nevertheless, those are far higher than the ones with high levels of Fertility Rate. Are you happy? How many children do you have? Tinker with the graph and tell me.</p>
-					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">What can you do?</p>
-					<p class="bodyText">Filter by clicking on any element in the legend. Use the brushing bar at the bottom by holding any of the two extremes and moving the context bar from left to right and viceversa. Use each point&#39;s tooltip to get detailed information, just hover over the points in the graph.</p>
-				</div>	
-			</div>
-			<div class="section" style="width:100%; height:100%; padding-left:2.5%; padding-right:7%;">
-				<div style="float: left; width: 70%;">
-					<div style="padding-left: 140px; font-size: 20px; font-weight: bold;">Fertility Rate and Religion from 1960 to 2010<br/></div>
-					<svg id="FertilityRateVsReligion" width="800" height="500"></svg>
-				</div>
-				<div style="float: right; width: 30%;">
-					<p style="font-size: 60px; font-weight: bold; color:#1a1a1a;">Religion<br/></p>
-					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">What&#39;s its impact?</p>
-					<p class="bodyText">We have shown the possible impact of Fertility Rate on happiness and economy. It&#39;s time to find possible causes on why some countries have higher Fertility Rate. Is country&#39;s prevalent religion somehow related to it? It looks like non-religion has far lower Fertility Rate than animists. Should governments avoid attaching their politics to one specific religion? Play around with the data.</p>
-					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">What can you do?</p>
-					<p class="bodyText">Filter by clicking on any element in the legend. Use the brushing bar at the bottom by holding any of the two extremes and moving the context bar from left to right and viceversa. Use each point&#39;s tooltip to get detailed information, just hover over the points in the graph.</p>
-				</div>	
-			</div>
-			<div class="section" style="width:100%; height:100%; padding-left:3%; padding-right:7%;">
-				<div style="float: right; width: 50%;">
-					<div style="padding-left:6%;">
-						<p style="font-size: 15px; font-weight: bold; color:#1a1a1a;">&nbsp;</p>					
-						<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Parameters</p>
-						<p class="bodyText">There are several useful parameters included all over the project. There is an intuitive and dynamic side bar which allows the user to navigate to any slide. If the user hovers over the circles a text will be displayed with the name of the scene. A thick circle is used to represent the current state/slide of the narrative visualization. On the animated slide, there is a button and a slider which control a set of parameters, such as the graph the user is seeing and the year in the title.</p>
-						<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Triggers</p>
-						<p class="bodyText">All the graphs have legends that are triggers as well. When the user clicks on the text or the colored box a section of the graph will be filtered. The parameter that is triggered is the one that controls what to show or not to show in the graph. Same thing happens with the brushing functionality that triggers a change in the scale parameter. On the animated slide, any change on the slider bar or the play button causes a change in the year parameter.</p>
-						<p style="font-size: 16px; font-weight: bold; color:#00aaff;">Cool things to notice</p>
-						<p class="bodyText">- The grid lines are automatically scale when using the brushing functionality.</br>- All the tooltips are automatically scale to fit the text.</br>- The legend&#39;s filters are gray-out when not shown in the graph.</br>- The play button has a nice push animation.</br>- Most of the graphs have a context graph so the user doesn&#39;t get lost when exploring.</p>
-						<p style="font-size: 16px; font-weight: bold; color:red;">Warning</p>
-						<p class="bodyText">This project is meant to be visualized on Chrome (recommended), Firefox, or Safari. It needs a screen with a resolution of at least 1255 X 584 pixels, if it is smaller than that then the user can see colliding objects.</p>
-					</div>
-				</div>
-				<div style="float: left; width: 50%;">
-					<p style="font-size: 40px; font-weight: bold; color:#1a1a1a;">About this visualization<br/></p>
-					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Narrative visualization method</p>
-					<p class="bodyText">This project was created based on the hybrid interactive slideshow ordering technique. Guidance is provided on each slide, but the users are free to drill down and list some details or investigate some tangent that they might be interested on or they can choose just to continue.</p>
-					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Scenes</p>
-					<p class="bodyText">This project was created as slides thanks to the awesome FullPage.js library in order to keep coherence and make it user-friendly. Each scene is a single chart with a specific goal related to the same subject and in a specific order to best convey the message. A double column layout is used in all the slides alternating the position of the text, this guarantees visual consistency. The same font is used throughout the project as well.</p>
-					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Annotations</p>
-					<p class="bodyText">The first scene is used as an introductory slide to explain the “what” and “why” of the project. After that, each slide has two annotations, one that suggests a train of thinking that is used to draw a conclusion at the end (that governments must take seriously fertility rate and that religion is a possible cause of high fertility rate in some countries) and another one that is used to explain the users how to play with the data. There is also a title on each graph (the one that is animated changes automatically year by year), their legends, and their axis labels. All the annotations are cleared on each slide and are independent from each other. All of them use the same font for visual consistency. Each graph has tooltips when hovering over the data points.</p>
-				</div>			
-			</div>
-			<div class="section" style="width:100%; height:100%; padding-left:3%; padding-right:7%;">
-				<div style="float: right; width: 50%;">
-					<div style="padding-left:6%;">
-						<p style="font-size: 40px; font-weight: bold; color:#1a1a1a;">Resources</br></p>					
-						<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Links</p>
-						<p class="bodyText">- <a href=https://github.com/alvarotrigo/fullPage.js>FullPage.js</a></br>- <a href=http://data.worldbank.org/indicator/SP.DYN.TFRT.IN>Dataset</a></br>- <a href=https://code.tutsplus.com/tutorials/building-a-multi-line-chart-using-d3js-part-2--cms-22973>Multiline graph</a></br>- <a href=https://bl.ocks.org/mbostock/34f08d5e11952a80609169b7917d4172>Brush and zoom</a></br>- <a href=http://bl.ocks.org/natemiller/7dec148bb6aab897e561>Zoom with multi-line</a></br>- <a href=http://bl.ocks.org/darrenjaworski/5544599>Animated scatter plor</a></br>- <a href=http://bl.ocks.org/cmdoptesc/fc0e318ce7992bed7ca8>Map timeline</a></br>- <a href=https://bl.ocks.org/d3noob/c506ac45617cf9ed39337f99f8511218>Grid lines</a></p>
-					</div>
-				</div>
-				<div style="float: left; width: 50%;">
-					<p style="font-size: 40px; font-weight: bold; color:#1a1a1a;">About the author<br/></p>
-					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">The purpose</p>
-					<p class="bodyText">This project is part of masters class CS 498: Data Visualization from University of Illinois Urbana-Champaign.</p>
-					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">The author</p>
-					<p class="bodyText">This project was created by <a href=https://www.linkedin.com/in/fvargaspiedra/>Francisco Vargas Piedra</a></p>
-					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Disclaimer</p>
-					<p class="bodyText">This is not a conclusive narrative, it is just meant to test abilities on D3 and data visualization concepts applied. All the code that was modified as a base to create some of the elements of the visualization is under the MIT Open License and each reference is expose in the next column.</p>
-				</div>			
-			</div>
-		</div>
-			
-			// ***************************************************
-			// ************ Initialize fullpage.js ***************
-			// ***************************************************
-
-			$(document).ready(function() {
-				$('#wrapper').fullpage({
-					sectionsColor: ['#ffffff', '#ffffff', '#f2f2f2', '#ffffff', '#f2f2f2', '#ffffff', '#f2f2f2'],
-					navigation: true,
-					navigationPosition: 'right',
-					navigationTooltips: ['Intro', 'Region', 'GDP', 'Happiness', 'Religion', 'About', 'Resources'],
-					anchors:['Intro', 'Overview', 'GDP', 'Happiness', 'Religion', 'About', 'Author']
-				});
-			});
-
-			// ***************************************************
-			// **************** GLOBAL UTILITIES *****************
-			// ***************************************************
-
-			// Parse time for yearly data		
-			var parseDate = d3.timeParse("%Y");
-			var formatTime = d3.timeFormat("%Y");
-
-			// Line color
-			var color = d3.scaleOrdinal(d3.schemeCategory10);
-
-			// ***************************************************
-			// ********* FERTILITY RATE BY REGION GRAPH **********
-			// ***************************************************
-
-			// ******** General definitions *********	
-			
-			// Div for tooltips
-			var div = d3.select("body").append("div")
-				.attr("class", "tooltip")
-				.style("opacity", 0);
-
-			// SVG to be modified selection
-			var vis = d3.select("#byCountryFertilityRate");
-
-			// Dimensions
-			var	MARGINS = { top: 20, right: 210, bottom: 130, left: 50 },
-				MARGINS2 = { top: 410, right: 210, bottom: 50, left: 50 },
-				WIDTH = +vis.attr("width") - MARGINS.left - MARGINS.right,
-				HEIGHT = +vis.attr("height") - MARGINS.top - MARGINS.bottom,
-				HEIGHT2 = +vis.attr("height") - MARGINS2.top - MARGINS2.bottom;
-
-			// Scales
-			var xScale = d3.scaleTime().range([0, WIDTH]),
-				xScale2 = d3.scaleTime().range([0, WIDTH]),
-				yScale = d3.scaleLinear().range([HEIGHT, 0]),
-				yScale2 = d3.scaleLinear().range([HEIGHT2, 0]);
-
-			// Grid Lines X-axis function
-			function make_x_gridlines() {		
-			    return d3.axisBottom(xScale)
-			        .ticks(10)
-			}
-
-			// Grid Lines Y-axis function
-			function make_y_gridlines() {		
-			    return d3.axisLeft(yScale)
-			        .ticks(10)
-			}
-
-			// Axis
-			var	xAxis = d3.axisBottom(xScale),
-				xAxis2 = d3.axisBottom(xScale2),
-				yAxis = d3.axisLeft(yScale);
-
-			// Define brush call
-			var brush = d3.brushX()
-			    .extent([[0, 0], [WIDTH, HEIGHT2]])
-			    .on("brush end", brushed);
-
-			// Append class focus that will be used to draw the charts
-			var focus = vis.append("g")
-			    .attr("class", "focus")
-			    .attr("transform", "translate(" + MARGINS.left + "," + MARGINS.top + ")");
-
-			// Append class context that will be used to draw the charts in the context bar
-			var context = vis.append("g")
-			    .attr("class", "context")
-			    .attr("transform", "translate(" + MARGINS2.left + "," + MARGINS2.top + ")");
-
-			// Append class points that will be used to draw the points in the focus bar
-			var points = vis.append("g")
-			    .attr("class", "points")
-			    .attr("transform", "translate(" + MARGINS.left + "," + MARGINS.top + ")");
-
-			// Line definition for focus section
-			var lineGen = d3.line()
-				.x(function(d) { return xScale(d.Year); })
-				.y(function(d) { return yScale(d.Fertility_Rate); });
-
-			// Line definition for context section
-			var lineGen2 = d3.line()
-				.x(function(d) { return xScale2(d.Year); })
-				.y(function(d) { return yScale2(d.Fertility_Rate); });
-
-			// clipPath definition
-			vis.append("defs").append("clipPath")
-				.attr("id", "clip")
-				.append("rect")
-				.attr("width", WIDTH)
-				.attr("height", HEIGHT);
-
-			// ******** Multi-line graph creation *********
-
-			// Source of information
-			d3.csv("https://fvargaspiedra.github.io/FRbyCountry.csv", function(data) {	
-
-				// Parse Year and convert Fertility Rate into number
-				data.forEach(function(d) {
-					d.Fertility_Rate = +d.Fertility_Rate;
-					d.Year = parseDate(d.Year);
-				});
-
-				// Nest data based on Country Name
-				var dataGroup = d3.nest()
-				    .key(function(d) { return d.Country_Name; })
-				    .entries(data);
-
-				// Nest data based on Region
-				var dataRegion = d3.nest()
-				    .key(function(d) { return d.Region; })
-				    .entries(data);
-
-				// Set domain for ranges dynamically based on data
-				xScale.domain([d3.min(data, function(d) { return d.Year; }), d3.max(data, function(d) { return d.Year; })])
-				yScale.domain([0, d3.max(data, function(d) { return d.Fertility_Rate; }) + 1]);
-				xScale2.domain(xScale.domain());
-				yScale2.domain(yScale.domain());
-
-				// For each Country Name draw a line graph and points
-				dataGroup.forEach(function(d, i) {
-
-					// Add the dots and tooltips when hovering
-					points.selectAll("dot")
-						.data(d.values)
-						.enter().append("circle")
-						.attr("r", 2.5)
-						.attr("cx", function(v) { return xScale(v.Year); })
-						.attr("cy", function(v) { return yScale(v.Fertility_Rate); })
-						.attr("class", "line")
-						// Set ID with region to each line to easily filter
-						.attr('id', function(v) { return 'point_'+v.Region.replace(/\s+/g, ''); })
-						.attr('clip-path', 'url(#clip)')
-						.on("mouseover", function(v) {
-							div.transition()
-								.duration(200)
-								.style("opacity", .9);
-							div.html("<b style='font-size:12px; color:#333333'>" + v.Country_Name + "</b><br/><b>Year: </b>" + formatTime(v.Year) + "<br/><b>FR: </b>" + v.Fertility_Rate)
-								.style("left", (d3.event.pageX) + "px")
-								.style("top", (d3.event.pageY - 28) + "px");
-						})
-						.on("mouseout", function(v) {
-							div.transition()
-								.duration(500)
-								.style("opacity", 0);
-						});
-
-					// Draw the line graphs on focus section
-					focus.append("path")
-						.datum(d.values)
-						.attr("class", "line")
-					    .attr('stroke-width', 1)
-					    .attr('fill', 'none')
-					    // Set ID with region to each line to easily filter
-					    .attr('id', 'line_'+d.values[0].Region.replace(/\s+/g, ''))
-					    .attr('clip-path', 'url(#clip)')
-						.attr("d", lineGen(d.values));
-
-					// Draw the line graphs on context section
-					context.append("path")
-						.datum(d.values)
-						.attr("class", "line")
-						.attr('stroke-width', 1)
-					    .attr('fill', 'none')
-					    // Set ID with region to each line to easily filter
-					    .attr('id', 'line_'+d.values[0].Region.replace(/\s+/g, ''))
-					    .attr('clip-path', 'url(#clip)')
-						.attr("d", lineGen2(d.values));
-				});
-
-				// For each Region add an interactive legend and specific color
-				dataRegion.forEach(function(d, i) {
-
-					// Text on legend
-					vis.append("text")
-						.attr("class", "legend")
-						.attr("x", WIDTH + MARGINS.left + 30)
-						.attr("y", HEIGHT/2 + i * 20)
-						.style("fill", "black")
-						.text(d.key)
-						// Add ID to legend text for easily filtering
-						.attr('id', 'legendText_'+d.values[0].Region.replace(/\s+/g, ''))
-						.on("mouseover", function(v) {
-							var shadow = "2px 2px 2px #808080";
-							d3.selectAll("#legendColor_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 1).style("stroke", "black");
-							d3.selectAll("#legendText_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
-						})
-						.on("mouseout", function(v) {
-							var shadow = "2px 2px 2px #aaa";
-							d3.selectAll("#legendColor_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 0).style("stroke", "none");
-							d3.selectAll("#legendText_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
-						})
-						.on('click', function() {
-							var active = d.active ? false : true;
-							var opacity = active ? 0 : 1;
-							var legendOpacity = active ? 0.3 : 1;
-							var shadow = active ? "none" : "2px 2px 2px #aaa";
-							var radius = active ? 0 : 2.5;
-							d3.selectAll("#line_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", opacity);
-							d3.selectAll("#point_"+d.values[0].Region.replace(/\s+/g, '')).attr("r", radius);
-							d3.selectAll("#legendColor_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity);
-							d3.selectAll("#legendText_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity).style("text-shadow", shadow);
-							d.active = active;
-						});
-
-					// Colored rectangle on legend
-					vis.append("rect")
-						.attr("x", WIDTH + MARGINS.left + 15)
-						.attr("y", HEIGHT/2 + i * 20 - 10)
-						.attr('fill', color(i))
-						.attr("width", 10)
-						.attr("height", 10)
-						// Add ID to legend color for easily filtering
-						.attr('id', 'legendColor_'+d.values[0].Region.replace(/\s+/g, ''))
-						.on("mouseover", function(v) {
-							var shadow = "2px 2px 2px #808080";
-							d3.selectAll("#legendColor_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 1).style("stroke", "black");
-							d3.selectAll("#legendText_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
-						})
-						.on("mouseout", function(v) {
-							var shadow = "2px 2px 2px #aaa";
-							d3.selectAll("#legendColor_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 0).style("stroke", "none");
-							d3.selectAll("#legendText_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
-						})
-						.on('click', function() {
-							var active = d.active ? false : true;
-							var opacity = active ? 0 : 1;
-							var legendOpacity = active ? 0.3 : 1;
-							var radius = active ? 0 : 2.5;
-							d3.selectAll("#line_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", opacity);
-							d3.selectAll("#point_"+d.values[0].Region.replace(/\s+/g, '')).attr("r", radius);
-							d3.selectAll("#legendColor_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity);
-							d3.selectAll("#legendText_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity);
-							d.active = active;
-						});
-
-					// Set color by region
-					focus.selectAll("#line_"+d.values[0].Region.replace(/\s+/g, '')).attr('stroke', color(i));
-					context.selectAll("#line_"+d.values[0].Region.replace(/\s+/g, '')).attr('stroke', color(i));
-					points.selectAll("#point_"+d.values[0].Region.replace(/\s+/g, '')).attr('fill', color(i));
-				});
-
-				// Set X axis to focus section
-				focus.append("g")
-					.attr("class", "axis axis--x")
-					.attr("transform", "translate(0," + HEIGHT + ")")
-					.call(xAxis);
-
-				// Set Y axis to focus section
-				focus.append("g")
-					.attr("class", "axis axis--y")
-					.call(yAxis);
-
-				// Set X axis to context section
-				context.append("g")
-					.attr("class", "axis axis--x")
-					.attr("transform", "translate(0," + HEIGHT2 + ")")
-					.call(xAxis2);
-
-				// Set brush call for context bar
-				context.append("g")
-					.attr("class", "brush")
-					.call(brush)
-					.call(brush.move, xScale.range());
-
-				// X Axis label
-				context.append("text")
-					.attr("transform", "translate(" + (WIDTH/2) + "," + (HEIGHT2 + 40) + ")")
-					.style("text-anchor", "middle")
-					.text("Year");
-
-				// Y Axis label
-				vis.append("text")
-					.attr("transform", "rotate(-90), translate(" + (-1 * HEIGHT / 2 ) + ", 20)")
-					.style("text-anchor", "middle")
-					.text("Fertility Rate (births per woman)"); 
-
-				// Add the grid lines to X-Axis
-				focus.append("g")			
-					.attr("class", "grid")
-					.attr("transform", "translate(0," + HEIGHT + ")")
-					.call(make_x_gridlines()
-						.tickSize(-HEIGHT)
-						.tickFormat("")
-					)
-
-				// Add the grid lines to Y-Axis
-				focus.append("g")			
-					.attr("class", "grid")
-					.call(make_y_gridlines()
-						.tickSize(-WIDTH)
-						.tickFormat("")
-					)   
-			});
-
-			// Refresh ranges and line graphs on focus section for brushing action
-			function brushed() {
-				var s = d3.event.selection || xScale2.range();
-				xScale.domain(s.map(xScale2.invert, xScale2));
-				focus.selectAll(".line").attr("d", lineGen);
-				points.selectAll(".line")
-					.attr("cx", function(v) { return xScale(v.Year); })
-					.attr("cy", function(v) { return yScale(v.Fertility_Rate); })
-				focus.select(".grid").call(make_x_gridlines()
-						.tickSize(-HEIGHT)
-						.tickFormat("")
-					);
-				focus.select(".axis--x").call(xAxis);
-			}
-
-			// ***************************************************
-			// ********** FERTILITY RATE VS HAPPINESS ************
-			// ***************************************************
-
-			// ******** Variable definition *********	
-
-			// Div for tooltips
-			var div_2 = d3.select("body").append("div")
-				.attr("class", "tooltip")
-				.style("opacity", 0);
-
-			// SVG to be modified selection
-			var vis_2 = d3.select("#FertilityRateVsHapiness");
-
-			// Dimensions
-			var	MARGINS_2 = { top: 20, right: 210, bottom: 130, left: 50 },
-				MARGINS2_2 = { top: 410, right: 210, bottom: 50, left: 50 },
-				WIDTH_2 = +vis_2.attr("width") - MARGINS_2.left - MARGINS_2.right,
-				HEIGHT_2 = +vis_2.attr("height") - MARGINS_2.top - MARGINS_2.bottom,
-				HEIGHT2_2 = +vis_2.attr("height") - MARGINS2_2.top - MARGINS2_2.bottom;
-
-			// Scales
-			var xScale_2 = d3.scaleLinear().range([0, WIDTH_2]),
-				xScale2_2 = d3.scaleLinear().range([0, WIDTH_2]),
-				yScale_2 = d3.scaleLinear().range([HEIGHT_2, 0]),
-				yScale2_2 = d3.scaleLinear().range([HEIGHT2_2, 0]);
-
-			// Grid Lines X-axis function
-			function make_x_gridlines_2() {		
-			    return d3.axisBottom(xScale_2)
-			        .ticks(10)
-			}
-
-			// Grid Lines Y-axis function
-			function make_y_gridlines_2() {		
-			    return d3.axisLeft(yScale_2)
-			        .ticks(10)
-			}
-
-			// Axis
-			var	xAxis_2 = d3.axisBottom(xScale_2),
-				xAxis2_2 = d3.axisBottom(xScale2_2),
-				yAxis_2 = d3.axisLeft(yScale_2);
-
-			// Define brush call
-			var brush_2 = d3.brushX()
-			    .extent([[0, 0], [WIDTH_2, HEIGHT2_2]])
-			    .on("brush end", brushed_2);
-
-			// Append class context that will be used to draw the charts in the context bar
-			var context_2 = vis_2.append("g")
-			    .attr("class", "context_2")
-			    .attr("transform", "translate(" + MARGINS2_2.left + "," + MARGINS2_2.top + ")");
-
-			// Append class points that will be used to draw the points in the graph
-			var points_2 = vis_2.append("g")
-			    .attr("class", "points_2")
-			    .attr("transform", "translate(" + MARGINS_2.left + "," + MARGINS_2.top + ")");
-
-			// clipPath definition
-			vis_2.append("defs").append("clipPath")
-				.attr("id", "clip_2")
-				.append("rect")
-				.attr("width", WIDTH_2)
-				.attr("height", HEIGHT_2);
-
-			// ******** Scatter plot graph creation *********
-
-			// Source of information
-			d3.csv("https://fvargaspiedra.github.io/FRvsHappiness.csv", function(data) {	
-				
-				// Fertility rate and happiness score to number
-				data.forEach(function(d) {
-					d.Fertility_Rate = +d.Fertility_Rate;
-					d.Happiness_Score = +d.Happiness_Score;
-				});
-
-				// Nest data based on Region
-				var dataRegion_2 = d3.nest()
-				    .key(function(d) { return d.Region; })
-				    .entries(data);
-
-				// Set domain for ranges dynamically based on data
-				xScale_2.domain([d3.min(data, function(d) { return d.Happiness_Score; }) - 0.1, d3.max(data, function(d) { return d.Happiness_Score; }) + 0.1])
-				yScale_2.domain([0, d3.max(data, function(d) { return d.Fertility_Rate; }) + 1]);
-				xScale2_2.domain(xScale_2.domain());
-				yScale2_2.domain(yScale_2.domain());
-
-				// Add the grid lines to X-Axis
-				points_2.append("g")			
-					.attr("class", "grid")
-					.attr("transform", "translate(0," + HEIGHT_2 + ")")
-					.call(make_x_gridlines_2()
-						.tickSize(-HEIGHT_2)
-						.tickFormat("")
-					)
-
-				// Add the grid lines to Y-Axis
-				points_2.append("g")			
-				.attr("class", "grid")
-				.call(make_y_gridlines_2()
-					.tickSize(-WIDTH_2)
-					.tickFormat("")
-				) 
-
-				// Add the dots with tooltips
-				points_2.selectAll("dot")
-					.data(data)
-					.enter().append("circle")
-					.attr("r", 4)
-					.attr("cx", function(v) { return xScale_2(v.Happiness_Score); })
-					.attr("cy", function(v) { return yScale_2(v.Fertility_Rate); })
-					.attr("class", "line_2")
-					.attr('id', function(v) { return 'point_2_'+v.Region.replace(/\s+/g, ''); } )
-					.attr('clip-path', 'url(#clip_2)')
-					.on("mouseover", function(v) {
-						div_2.transition()
-							.duration(200)
-							.style("opacity", .9);
-						div_2.html("<b style='font-size:12px; color:#333333'>" + v.Country_Name + "</b><br/><b>Year: 2015</b><br/><b>Fertility Rate: </b>" + v.Fertility_Rate + "<br/><b>Happiness Score: </b>" + v.Happiness_Score)
-							.style("left", (d3.event.pageX) + "px")
-							.style("top", (d3.event.pageY - 28) + "px");
-					})
-					.on("mouseout", function(v) {
-						div_2.transition()
-						.duration(500)
-						.style("opacity", 0);
-					});
-
-				// Draw the scatter graph on context section
-				context_2.selectAll("dot")
-					.data(data)
-					.enter().append("circle")
-					.attr("r", 2.5)
-					.attr("cx", function(v) { return xScale2_2(v.Happiness_Score); })
-					.attr("cy", function(v) { return yScale2_2(v.Fertility_Rate); })
-					.attr("class", "line_2")
-					.attr('id', function(v) { return 'point_2_'+v.Region.replace(/\s+/g, '') } )
-					.attr('clip-path', 'url(#clip_2)');
-
-				// For each Region add a legend and color
-				dataRegion_2.forEach(function(d, i) {
-
-					// Create legend text for each region
-					vis_2.append("text")
-						.attr("class", "legend")
-						.attr("x", WIDTH_2 + MARGINS_2.left + 30)
-						.attr("y", HEIGHT_2/2 + i * 20)
-						.style("fill", "black")
-						.text(d.key)
-						.attr('id', 'legendText_2_'+d.values[0].Region.replace(/\s+/g, ''))
-						.on("mouseover", function(v) {
-							var shadow = "2px 2px 2px #808080";
-							d3.selectAll("#legendColor_2_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 1).style("stroke", "black");
-							d3.selectAll("#legendText_2_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
-						})
-						.on("mouseout", function(v) {
-							var shadow = "2px 2px 2px #aaa";
-							d3.selectAll("#legendColor_2_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 0).style("stroke", "none");
-							d3.selectAll("#legendText_2_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
-						})
-						.on('click', function() {
-							var active = d.active ? false : true;
-							var opacity = active ? 0 : 1;
-							var legendOpacity = active ? 0.3 : 1;
-							var shadow = active ? "none" : "2px 2px 2px #aaa";
-							var radius = active ? 0 : 4;
-							d3.selectAll("#line_2_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", opacity);
-							d3.selectAll("#point_2_"+d.values[0].Region.replace(/\s+/g, '')).attr("r", radius);
-							d3.selectAll("#legendColor_2_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity);
-							d3.selectAll("#legendText_2_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity).style("text-shadow", shadow);
-							d.active = active;
-						});
-
-					// Create colored rectangle for each region				
-					vis_2.append("rect")
-						.attr("x", WIDTH_2 + MARGINS_2.left + 15)
-						.attr("y", HEIGHT_2/2 + i * 20 - 10)
-						.attr('fill', color(i))
-						.attr("width", 10)
-						.attr("height", 10)
-						.attr('id', 'legendColor_2_'+d.values[0].Region.replace(/\s+/g, ''))
-						.on("mouseover", function(v) {
-							var shadow = "2px 2px 2px #808080";
-							d3.selectAll("#legendColor_2_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 1).style("stroke", "black");
-							d3.selectAll("#legendText_2_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
-						})
-						.on("mouseout", function(v) {
-							var shadow = "2px 2px 2px #aaa";
-							d3.selectAll("#legendColor_2_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 0).style("stroke", "none");
-							d3.selectAll("#legendText_2_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
-						})
-						.on('click', function() {
-							var active = d.active ? false : true;
-							var opacity = active ? 0 : 1;
-							var legendOpacity = active ? 0.3 : 1;
-							var radius = active ? 0 : 4;
-							d3.selectAll("#line_2_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", opacity);
-							d3.selectAll("#point_2_"+d.values[0].Region.replace(/\s+/g, '')).attr("r", radius);
-							d3.selectAll("#legendColor_2_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity);
-							d3.selectAll("#legendText_2_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity);
-							d.active = active;
-						});
-
-					// Set dots color by region
-					context_2.selectAll("#point_2_"+d.values[0].Region.replace(/\s+/g, '')).attr('fill', color(i));
-					points_2.selectAll("#point_2_"+d.values[0].Region.replace(/\s+/g, '')).attr('fill', color(i));
-				});
-
-				// Set X axis to scatter plot section
-				points_2.append("g")
-					.attr("class", "axis axis--x")
-					.attr("transform", "translate(0," + HEIGHT_2 + ")")
-					.call(xAxis_2);
-
-				// Set Y axis to scatter plot section
-				points_2.append("g")
-					.attr("class", "axis axis--y")
-					.call(yAxis_2);
-
-				// Set X axis to context section
-				context_2.append("g")
-					.attr("class", "axis axis--x")
-					.attr("transform", "translate(0," + HEIGHT2_2 + ")")
-					.call(xAxis2_2);
-
-				// Set brush call for context bar
-				context_2.append("g")
-					.attr("class", "brush_2")
-					.call(brush_2)
-					.call(brush_2.move, xScale_2.range());
-
-				// X Axis label
-				context_2.append("text")
-					.attr("transform", "translate(" + (WIDTH_2/2) + "," + (HEIGHT2_2 + 40) + ")")
-					.style("text-anchor", "middle")
-					.text("Happiness Score");
-
-				// Y Axis label
-				vis_2.append("text")
-					.attr("transform", "rotate(-90), translate(" + (-1 * HEIGHT_2 / 2 ) + ", 20)")
-					.style("text-anchor", "middle")
-					.text("Fertility Rate (births per woman)");     
-			});
-
-			// Refresh ranges and line graphs on scatter plot section for brushing action
-			function brushed_2() {
-				var s = d3.event.selection || xScale2_2.range();
-				xScale_2.domain(s.map(xScale2_2.invert, xScale2_2));
-				points_2.selectAll(".line_2")
-					.attr("cx", function(v) { return xScale_2(v.Happiness_Score); })
-					.attr("cy", function(v) { return yScale_2(v.Fertility_Rate); });
-				points_2.select(".axis--x").call(xAxis_2);
-				points_2.select(".grid").call(make_x_gridlines_2()
-						.tickSize(-HEIGHT_2)
-						.tickFormat("")
-					);
-			}
-
-			// ************************************************************
-			// *********** FERTILITY RATE VS GDP PER CAPITA ***************
-			// ************************************************************
-
-			// ******** Variable definition *********	
-
-			// Div for tooltips
-			var div_3 = d3.select("body").append("div")
-				.attr("class", "tooltip")
-				.style("opacity", 0);
-
-			// SVG to be modified selection
-			var vis_3 = d3.select("#FertilityRateVsGDP");
-
-			// Dimensions
-			var	MARGINS_3 = { top: 20, right: 210, bottom: 50, left: 50 },
-				WIDTH_3 = +vis_3.attr("width") - MARGINS_3.left - MARGINS_3.right,
-				HEIGHT_3 = +vis_3.attr("height") - MARGINS_3.top - MARGINS_3.bottom;
-
-			// Scales
-			var xScale_3 = d3.scaleLinear().range([0, WIDTH_3]),
-				yScale_3 = d3.scaleLinear().range([HEIGHT_3, 0]);
-
-			// Grid Lines X-axis function
-			function make_x_gridlines_3() {		
-			    return d3.axisBottom(xScale_3)
-			        .ticks(10)
-			}
-
-			// Grid Lines Y-axis function
-			function make_y_gridlines_3() {		
-			    return d3.axisLeft(yScale_3)
-			        .ticks(10)
-			}
-
-			// Axis
-			var	xAxis_3 = d3.axisBottom(xScale_3),
-				yAxis_3 = d3.axisLeft(yScale_3);
-
-			// Append class points that will be used to draw the points in the scatter plot
-			var points_3 = vis_3.append("g")
-			    .attr("class", "points_3")
-			    .attr("transform", "translate(" + MARGINS_3.left + "," + MARGINS_3.top + ")");
-
-			// clipPath definition
-			vis_3.append("defs").append("clipPath")
-				.attr("id", "clip_3")
-				.append("rect")
-				.attr("width", WIDTH_3)
-				.attr("height", HEIGHT_3);
-
-			// ******** Scatter plot graph creation *********
-
-			// Source of information
-			d3.csv("https://fvargaspiedra.github.io/FRandGDP.csv", function(data) {	
-
-				// Fertility Rate and GDP to number
-				data.forEach(function(d) {
-					d.Fertility_Rate = +d.Fertility_Rate;
-					d.GDP_Per_Capita = +d.GDP_Per_Capita;
-				});
-
-				// Nest data based on Year
-				var dataGroup_3 = d3.nest()
-				    .key(function(d) { return d.Year; })
-				    .entries(data);
-
-				// Nest data based on Region
-				var dataRegion_3 = d3.nest()
-				    .key(function(d) { return d.Region; })
-				    .entries(data);
-
-				// Set domain for ranges dynamically based on data
-				xScale_3.domain([d3.min(data, function(d) { return d.GDP_Per_Capita; }) - 100, d3.max(data, function(d) { return d.GDP_Per_Capita; }) + 5000])
-				yScale_3.domain([0, d3.max(data, function(d) { return d.Fertility_Rate; }) + 1]);
-
-				// Add the grid lines to X-Axis
-				points_3.append("g")			
-					.attr("class", "grid")
-					.attr("transform", "translate(0," + HEIGHT_3 + ")")
-					.call(make_x_gridlines_3()
-						.tickSize(-HEIGHT_3)
-						.tickFormat("")
-					)
-
-				// Add the grid lines to Y-Axis
-				points_3.append("g")			
-					.attr("class", "grid")
-					.call(make_y_gridlines_3()
-						.tickSize(-WIDTH_3)
-						.tickFormat("")
-					) 
-
-				// Max GDP value to calculate radius
-				var maxGDP = d3.max(data, function(d) { return d.GDP_Per_Capita; });
-
-				// Get default slider value
-				var sliderValue = $("#slider").val();
-
-				// For each Country Name draw a line graph only if it is the country of the default slider value
-				dataGroup_3.forEach(function(d, i) {
-					if(d.key==$("#slider").val()) {
-
-						// Add the dots with tooltips
-						points_3.selectAll("dot")
-							.data(d.values)
-							.enter().append("circle")
-							// The dataset has -1 when value is not present, for those cases
-							// we create the dot but it's invisible.
-							.attr("r", function(v) {
-								if(v.GDP_Per_Capita == -1 || v.Fertility_Rate == -1) {
-									return 0;
-								} else {
-									return (v.GDP_Per_Capita * 12 / maxGDP) + 1;
-								} 
-							})
-							.attr("cx", function(v) { 
-								if(v.GDP_Per_Capita == -1 || v.Fertility_Rate == -1) {
-									return 0;
-								} else {
-									return xScale_3(v.GDP_Per_Capita);
-								}
-							})
-							.attr("cy", function(v) {
-								if(v.GDP_Per_Capita == -1 || v.Fertility_Rate == -1) {
-									return 0;
-								} else {
-									return yScale_3(v.Fertility_Rate);
-								}
-							})
-							.classed("line_3", true)
-							.attr('id', function(v) { return 'point_3_'+v.Region.replace(/\s+/g, ''); } )
-							.attr('clip-path', 'url(#clip_3)')
-							.on("mouseover", function(v) {
-								div_3.transition()
-									.duration(200)
-									.style("opacity", .9);
-								div_3.html("<b style='font-size:12px; color:#333333'>" + v.Country_Name + "</b><br/><b>Fertility Rate: </b>" + v.Fertility_Rate + "<br/><b>GDP Per Capita: </b>" + v.GDP_Per_Capita)
-									.style("left", (d3.event.pageX) + "px")
-									.style("top", (d3.event.pageY - 28) + "px");
-							})
-							.on("mouseout", function(v) {
-								div_3.transition()
-								.duration(500)
-								.style("opacity", 0);
-							});
-					}
-				});
-
-				// For each Region add a legend and set the color
-				dataRegion_3.forEach(function(d, i) {
-
-					// Create legend text for each region
-					vis_3.append("text")
-						.attr("class", "legend")
-						.attr("x", WIDTH_3 + MARGINS_3.left + 30)
-						.attr("y", HEIGHT_3/2 + i * 20)
-						.style("fill", "black")
-						.text(d.key)
-						.attr('id', 'legendText_3_'+d.values[0].Region.replace(/\s+/g, ''))
-						.on("mouseover", function(v) {
-							var shadow = "2px 2px 2px #808080";
-							d3.selectAll("#legendColor_3_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 1).style("stroke", "black");
-							d3.selectAll("#legendText_3_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
-						})
-						.on("mouseout", function(v) {
-							var shadow = "2px 2px 2px #aaa";
-							d3.selectAll("#legendColor_3_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 0).style("stroke", "none");
-							d3.selectAll("#legendText_3_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
-						})
-						.on('click', function() {
-							var active = d.active ? false : true;
-							var legendOpacity = active ? 0.3 : 1;
-							var shadow = active ? "none" : "2px 2px 2px #aaa";
-							var opacity = active ? d3.selectAll("#point_3_"+d.values[0].Region.replace(/\s+/g, '')).attr("opacity", 0) : d3.selectAll("#point_3_"+d.values[0].Region.replace(/\s+/g, '')).attr("opacity", 1);
-							var pointerEvent = active ? d3.selectAll("#point_3_"+d.values[0].Region.replace(/\s+/g, '')).style("pointer-events", "none") : d3.selectAll("#point_3_"+d.values[0].Region.replace(/\s+/g, '')).style("pointer-events", "auto");
-							d3.selectAll("#legendColor_3_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity);
-							d3.selectAll("#legendText_3_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity).style("text-shadow", shadow);
-							d.active = active;
-						});
-
-					// Create colored rectancle for each region	
-					vis_3.append("rect")
-						.attr("x", WIDTH_3 + MARGINS_3.left + 15)
-						.attr("y", HEIGHT_3/2 + i * 20 - 10)
-						.attr('fill', color(i))
-						.attr("width", 10)
-						.attr("height", 10)
-						.attr('id', 'legendColor_3_'+d.values[0].Region.replace(/\s+/g, ''))
-						.on("mouseover", function(v) {
-							var shadow = "2px 2px 2px #808080";
-							d3.selectAll("#legendColor_3_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 1).style("stroke", "black");
-							d3.selectAll("#legendText_3_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
-						})
-						.on("mouseout", function(v) {
-							var shadow = "2px 2px 2px #aaa";
-							d3.selectAll("#legendColor_3_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 0).style("stroke", "none");
-							d3.selectAll("#legendText_3_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
-						})
-						.on('click', function() {
-							var active = d.active ? false : true;
-							var legendOpacity = active ? 0.3 : 1;
-							var shadow = active ? "none" : "2px 2px 2px #aaa";
-							var opacity = active ? d3.selectAll("#point_3_"+d.values[0].Region.replace(/\s+/g, '')).attr("opacity", 0) : d3.selectAll("#point_3_"+d.values[0].Region.replace(/\s+/g, '')).attr("opacity", 1);
-							var pointerEvent = active ? d3.selectAll("#point_3_"+d.values[0].Region.replace(/\s+/g, '')).style("pointer-events", "none") : d3.selectAll("#point_3_"+d.values[0].Region.replace(/\s+/g, '')).style("pointer-events", "auto");
-							d3.selectAll("#legendColor_3_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity);
-							d3.selectAll("#legendText_3_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity).style("text-shadow", shadow);
-							d.active = active;
-						});
-
-					// Set dots color by region
-					points_3.selectAll("#point_3_"+d.values[0].Region.replace(/\s+/g, '')).attr('fill', color(i));
-				});
-
-				// Set X axis to scatter plot section
-				points_3.append("g")
-					.attr("class", "axis axis--x")
-					.attr("transform", "translate(0," + HEIGHT_3 + ")")
-					.call(xAxis_3);
-
-				// Set Y axis to scatter plot section
-				points_3.append("g")
-					.attr("class", "axis axis--y")
-					.call(yAxis_3);
-
-				// X Axis label
-				points_3.append("text")
-					.attr("transform", "translate(" + (WIDTH_3/2) + "," + (HEIGHT_3 + 40) + ")")
-					.style("text-anchor", "middle")
-					.text("GDP Per Capita (US Dollar)");
-
-				// Y Axis label
-				vis_3.append("text")
-					.attr("transform", "rotate(-90), translate(" + (-1 * HEIGHT_3 / 2 ) + ", 20)")
-					.style("text-anchor", "middle")
-					.text("Fertility Rate (births per woman)");    
-	
-				// Boolean variable to control whether Play was pressed or not
-				var running = false;
-
-				// Variable to set duration of iterations when Play is pressed
-				var timer;
-
-				// Define action when Play is clicked
-				$("button").on("click", function() {
-
-					var duration = 300,
-					maxstep = 2015,
-					minstep = 1960;
-
-					if (running == true) {
-						$("button").html("Play");
-						running = false;
-						clearInterval(timer);
-					} else if (running == false) {
-						$("button").html("Pause");
-						sliderValue = $("#slider").val();
-						timer = setInterval( function(){
-							if (sliderValue < maxstep){
-								sliderValue++;
-								$("#slider").val(sliderValue);
-								$('#range').html(sliderValue);
-								$('#title').html(sliderValue);
-							} else {
-								$("button").html("Play");
-								running = false;
-								clearInterval(timer);
-							}
-							$("#slider").val(sliderValue);
-							update();
-						} , duration);
-						running = true;
-					}
-				});
-
-				// Define action when slider is changed
-				$("#slider").on("change", function(){
-					update();
-					$("#range").html($("#slider").val());
-					$("#title").html($("#slider").val());
-					clearInterval(timer);
-					$("button").html("Play");
-					running = false;
-				});
-
-				// Function to update scatter plot when slider is changed or Play is pressed
-				update = function() {
-
-					// For each Year draw the right information only when slider coincides with year's value
-					dataGroup_3.forEach(function(d, i) {
-						if(d.key==$("#slider").val()) {
-							// Draw the right dots
-							points_3.selectAll(".line_3")
-								.data(d.values)
-								// The dataset has -1 when value is not present, for those cases
-								// we create the dot but it's invisible.
-								.attr("r", function(v) {
-									if(v.GDP_Per_Capita == -1 || v.Fertility_Rate == -1) {
-										return 0;
-									} else {
-										return (v.GDP_Per_Capita * 12 / maxGDP) + 1;
-									} 
-								})
-								.attr("cx", function(v) { 
-									if(v.GDP_Per_Capita == -1 || v.Fertility_Rate == -1) {
-										return 0;
-									} else {
-										return xScale_3(v.GDP_Per_Capita);
-									}
-								})
-								.attr("cy", function(v) {
-									if(v.GDP_Per_Capita == -1 || v.Fertility_Rate == -1) {
-										return 0;
-									} else {
-										return yScale_3(v.Fertility_Rate);
-									}
-								});
-						}
-					});
-				}
-			});	
-
-			// ***************************************************
-			// *********** FERTILITY RATE VS RELIGION ************
-			// ***************************************************
-
-			// ******** Variable definition *********	
-			
-			// Div for tooltips
-			var div_4 = d3.select("body").append("div")
-				.attr("class", "tooltip")
-				.style("opacity", 0);
-
-			// SVG to be modified selection
-			var vis_4 = d3.select("#FertilityRateVsReligion");
-
-			// Dimensions
-			var	MARGINS_4 = { top: 20, right: 160, bottom: 130, left: 50 },
-				MARGINS2_4 = { top: 410, right: 160, bottom: 50, left: 50 },
-				WIDTH_4 = +vis.attr("width") - MARGINS_4.left - MARGINS_4.right,
-				HEIGHT_4 = +vis.attr("height") - MARGINS_4.top - MARGINS_4.bottom,
-				HEIGHT2_4 = +vis.attr("height") - MARGINS2_4.top - MARGINS2_4.bottom;
-
-			// Scales
-			var xScale_4 = d3.scaleTime().range([0, WIDTH_4]),
-				xScale2_4 = d3.scaleTime().range([0, WIDTH_4]),
-				yScale_4 = d3.scaleLinear().range([HEIGHT_4, 0]),
-				yScale2_4 = d3.scaleLinear().range([HEIGHT2_4, 0]);
-
-			// Grid Lines X-axis function
-			function make_x_gridlines_4() {		
-			    return d3.axisBottom(xScale_4)
-			        .ticks(10)
-			}
-
-			// Grid Lines Y-axis function
-			function make_y_gridlines_4() {		
-			    return d3.axisLeft(yScale_4)
-			        .ticks(10)
-			}
-
-			// Axis
-			var	xAxis_4 = d3.axisBottom(xScale_4),
-				xAxis2_4 = d3.axisBottom(xScale2_4),
-				yAxis_4 = d3.axisLeft(yScale_4);
-
-			// Define brush call
-			var brush_4 = d3.brushX()
-			    .extent([[0, 0], [WIDTH_4, HEIGHT2_4]])
-			    .on("brush end", brushed_4);
-
-			// Append class focus that will be used to draw the charts
-			var focus_4 = vis_4.append("g")
-			    .attr("class", "focus_4")
-			    .attr("transform", "translate(" + MARGINS_4.left + "," + MARGINS_4.top + ")");
-
-			// Append class context that will be used to draw the charts in the context bar
-			var context_4 = vis_4.append("g")
-			    .attr("class", "context_4")
-			    .attr("transform", "translate(" + MARGINS2_4.left + "," + MARGINS2_4.top + ")");
-
-			// Append class points that will be used to draw the points in the focus bar
-			var points_4 = vis_4.append("g")
-			    .attr("class", "points_4")
-			    .attr("transform", "translate(" + MARGINS_4.left + "," + MARGINS_4.top + ")");
-
-			// Line definition for focus section
-			var lineGen_4 = d3.line()
-				.x(function(d) { return xScale_4(d.Year); })
-				.y(function(d) { return yScale_4(d.Avg_Fertility_Rate); });
-
-			// Line definition for context section
-			var lineGen2_4 = d3.line()
-				.x(function(d) { return xScale2_4(d.Year); })
-				.y(function(d) { return yScale2_4(d.Avg_Fertility_Rate); });
-
-			// clipPath definition
-			vis_4.append("defs").append("clipPath")
-				.attr("id", "clip_4")
-				.append("rect")
-				.attr("width", WIDTH_4)
-				.attr("height", HEIGHT_4);
-
-			// ******** Multi-line graph creation *********
-
-			// Source of information
-			d3.csv("https://fvargaspiedra.github.io/FRvsReligion.csv", function(data) {	
-
-				// Parse Year and convert Fertility Rate into number
-				data.forEach(function(d) {
-					d.Avg_Fertility_Rate = +d.Avg_Fertility_Rate;
-					d.Year = parseDate(d.Year);
-				});
-
-				// Nest data based on Religion
-				var dataGroup_4 = d3.nest()
-				    .key(function(d) { return d.Religion; })
-				    .entries(data);
-
-				// Set domain for ranges dynamically based on data
-				xScale_4.domain([d3.min(data, function(d) { return d.Year; }), d3.max(data, function(d) { return d.Year; })])
-				yScale_4.domain([0, d3.max(data, function(d) { return d.Avg_Fertility_Rate; }) + 1]);
-				xScale2_4.domain(xScale_4.domain());
-				yScale2_4.domain(yScale_4.domain());
-
-				// Add the grid lines to X-Axis
-				focus_4.append("g")			
-					.attr("class", "grid")
-					.attr("transform", "translate(0," + HEIGHT_4 + ")")
-					.call(make_x_gridlines_4()
-						.tickSize(-HEIGHT_4)
-						.tickFormat("")
-					)
-
-				// Add the grid lines to X-Axis
-				focus_4.append("g")			
-					.attr("class", "grid")
-					.call(make_y_gridlines_4()
-						.tickSize(-WIDTH_4)
-						.tickFormat("")
-					) 
-
-				// For each Religion draw a line graph
-				dataGroup_4.forEach(function(d, i) {
-
-					// Add the dots with tooltips
-					points_4.selectAll("dot")
-						.data(d.values)
-						.enter().append("circle")
-						.attr('fill', color(i))
-						.attr("r", 4.5)
-						.attr("cx", function(v) { return xScale_4(v.Year); })
-						.attr("cy", function(v) { return yScale_4(v.Avg_Fertility_Rate); })
-						.attr("class", "line_4")
-						// Set ID with region to each line to easily filter
-						.attr('id', 'point_4_'+d.values[0].Religion.replace(/\s+/g, ''))
-						.attr('clip-path', 'url(#clip_4)')
-						.on("mouseover", function(v) {
-							div_4.transition()
-								.duration(200)
-								.style("opacity", .9);
-							div_4.html("<b style='font-size:12px; color:#333333'>" + v.Religion + "</b><br/><b>Year: </b>" + formatTime(v.Year) + "<br/><b>Avg. Fertility Rate: </b>" + v.Avg_Fertility_Rate)
-								.style("left", (d3.event.pageX) + "px")
-								.style("top", (d3.event.pageY - 28) + "px");
-						})
-						.on("mouseout", function(v) {
-							div_4.transition()
-							.duration(500)
-							.style("opacity", 0);
-						});
-
-					// Draw the line graph on focus section
-					focus_4.append("path")
-						.datum(d.values)
-						.attr("class", "line_4")
-					    .attr('stroke-width', 1)
-					    .attr('fill', 'none')
-					    .attr('stroke', color(i))
-					    // Set ID with region to each line to easily filter
-					    .attr('id', 'line_4_'+d.values[0].Religion.replace(/\s+/g, ''))
-					    .attr('clip-path', 'url(#clip_4)')
-						.attr("d", lineGen_4(d.values));
-
-					// Draw the line grapsh on context section
-					context_4.append("path")
-						.datum(d.values)
-						.attr("class", "line_4")
-						.attr('stroke-width', 1)
-					    .attr('fill', 'none')
-					    .attr('stroke', color(i))
-					    // Set ID with region to each line to easily filter
-					    .attr('id', 'line_4_'+d.values[0].Religion.replace(/\s+/g, ''))
-					    .attr('clip-path', 'url(#clip_4)')
-						.attr("d", lineGen2_4(d.values));
-
-					// Create legend text for each region
-					vis_4.append("text")
-						.attr("class", "legend")
-						.attr("x", WIDTH_4 + MARGINS_4.left + 30)
-						.attr("y", HEIGHT_4/2 + i * 20)
-						.style("fill", "black")
-						.text(d.key)
-						.attr('id', 'legendText_4_'+d.values[0].Religion.replace(/\s+/g, ''))
-						.on("mouseover", function(v) {
-							var shadow = "2px 2px 2px #808080";
-							d3.selectAll("#legendColor_4_"+d.values[0].Religion.replace(/\s+/g, '')).style("stroke-width", 1).style("stroke", "black");
-							d3.selectAll("#legendText_4_"+d.values[0].Religion.replace(/\s+/g, '')).style("text-shadow", shadow);
-						})
-						.on("mouseout", function(v) {
-							var shadow = "2px 2px 2px #aaa";
-							d3.selectAll("#legendColor_4_"+d.values[0].Religion.replace(/\s+/g, '')).style("stroke-width", 0).style("stroke", "none");
-							d3.selectAll("#legendText_4_"+d.values[0].Religion.replace(/\s+/g, '')).style("text-shadow", shadow);
-						})
-						.on('click', function() {
-							var active = d.active ? false : true;
-							var opacity = active ? 0 : 1;
-							var radius = active ? 0 : 4.5;
-							var legendOpacity = active ? 0.3 : 1;
-							var shadow = active ? "none" : "2px 2px 2px #aaa";
-							d3.selectAll("#line_4_"+d.values[0].Religion.replace(/\s+/g, '')).style("opacity", opacity);
-							d3.selectAll("#point_4_"+d.values[0].Religion.replace(/\s+/g, '')).attr("r", radius);
-							d3.selectAll("#legendColor_4_"+d.values[0].Religion.replace(/\s+/g, '')).style("opacity", legendOpacity);
-							d3.selectAll("#legendText_4_"+d.values[0].Religion.replace(/\s+/g, '')).style("opacity", legendOpacity).style("text-shadow", shadow);
-							d.active = active;
-						});
-
-					// Create colored recangle for legend
-					vis_4.append("rect")
-						.attr("x", WIDTH_4 + MARGINS_4.left + 15)
-						.attr("y", HEIGHT_4/2 + i * 20 - 10)
-						.attr('fill', color(i))
-						.attr("width", 10)
-						.attr("height", 10)
-						.attr('id', 'legendColor_4_'+d.values[0].Religion.replace(/\s+/g, ''))
-						.on("mouseover", function(v) {
-							var shadow = "2px 2px 2px #808080";
-							d3.selectAll("#legendColor_4_"+d.values[0].Religion.replace(/\s+/g, '')).style("stroke-width", 1).style("stroke", "black");
-							d3.selectAll("#legendText_4_"+d.values[0].Religion.replace(/\s+/g, '')).style("text-shadow", shadow);
-						})
-						.on("mouseout", function(v) {
-							var shadow = "2px 2px 2px #aaa";
-							d3.selectAll("#legendColor_4_"+d.values[0].Religion.replace(/\s+/g, '')).style("stroke-width", 0).style("stroke", "none");
-							d3.selectAll("#legendText_4_"+d.values[0].Religion.replace(/\s+/g, '')).style("text-shadow", shadow);
-						})
-						.on('click', function() {
-							var active = d.active ? false : true;
-							var opacity = active ? 0 : 1;
-							var radius = active ? 0 : 4.5;
-							var legendOpacity = active ? 0.3 : 1;
-							var shadow = active ? "none" : "2px 2px 2px #aaa";
-							d3.selectAll("#line_4_"+d.values[0].Religion.replace(/\s+/g, '')).style("opacity", opacity);
-							d3.selectAll("#point_4_"+d.values[0].Religion.replace(/\s+/g, '')).attr("r", radius);
-							d3.selectAll("#legendColor_4_"+d.values[0].Religion.replace(/\s+/g, '')).style("opacity", legendOpacity);
-							d3.selectAll("#legendText_4_"+d.values[0].Religion.replace(/\s+/g, '')).style("opacity", legendOpacity).style("text-shadow", shadow);
-							d.active = active;
-						});
-				});
-
-				// Set X axis to focus section
-				focus_4.append("g")
-					.attr("class", "axis axis--x")
-					.attr("transform", "translate(0," + HEIGHT_4 + ")")
-					.call(xAxis_4);
-
-				// Set Y axis to focus section
-				focus_4.append("g")
-					.attr("class", "axis axis--y")
-					.call(yAxis_4);
-
-				// Set X axis to context section
-				context_4.append("g")
-					.attr("class", "axis axis--x")
-					.attr("transform", "translate(0," + HEIGHT2_4 + ")")
-					.call(xAxis2_4);
-
-				// Set brush call for context bar
-				context_4.append("g")
-					.attr("class", "brush_4")
-					.call(brush_4)
-					.call(brush_4.move, xScale_4.range());
-
-				// X Axis label
-				context_4.append("text")
-					.attr("transform", "translate(" + (WIDTH_4/2) + "," + (HEIGHT2_4 + 40) + ")")
-					.style("text-anchor", "middle")
-					.text("Year");
-
-				// Y Axis label
-				vis_4.append("text")
-					.attr("transform", "rotate(-90), translate(" + (-1 * HEIGHT_4 / 2 ) + ", 20)")
-					.style("text-anchor", "middle")
-					.text("Avg. Fertility Rate (births per woman)");    
-			});
-
-			// Refresh ranges and line graphs on focus section for brushing action
-			function brushed_4() {
-				var s = d3.event.selection || xScale2_4.range();
-				xScale_4.domain(s.map(xScale2_4.invert, xScale2_4));
-				focus_4.selectAll(".line_4").attr("d", lineGen_4);
-				points_4.selectAll(".line_4")
-					.attr("cx", function(v) { return xScale_4(v.Year); })
-					.attr("cy", function(v) { return yScale_4(v.Avg_Fertility_Rate); })
-				focus_4.select(".grid").call(make_x_gridlines_4()
-						.tickSize(-HEIGHT_4)
-						.tickFormat("")
-					);
-				focus_4.select(".axis--x").call(xAxis_4);
-			}	
-		</script>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <title>H1B Employment Analysis</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,300,900,100' rel='stylesheet'
+          type='text/css'>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.bootpag.min.js"></script>
+    <script type="text/javascript" src="js/handlebars-v4.0.10.js"></script>
+    <script type="text/javascript" src="js/d3-scale-chromatic.v0.3.min.js"></script>
+    <script type="text/javascript" src="js/accounting.min.js"></script>
+    <script src="lib/util/box.js"></script>
+    <script src="lib/part1.js"></script>
+    <script src="lib/part2.js"></script>
+    <script src="lib/part3.js"></script>
+    <script src="lib/part5.js"></script>
+    <script src="lib/part6.js"></script>
+    <script src="lib/map.js"></script>
+    <script src="lib/sub_chart/median_wage.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div style="width:100%;height:75px;background-color:#ffffff;border-bottom: 1px solid #d5d5d6;margin-bottom: 10px;">
+
+    <div style="background-color: #e58c72;height: 100%;width:250px;line-height: 75px;text-align: center;color:#FFFFFF;font-size: 1.5em"
+         class="pull-left">
+    </div>
+    <div style="line-height: 75px;margin-left:20px;color:#6e6e74;font-size: 1.4em" class="pull-left">
+        H1B Employment Analysis (2011 - 2016)
+    </div>
+</div>
+
+<div id="exTab" class="container">
+    <div class="row">
+        <div class="col-md-4 custom_padding">
+            <div class="bg">
+                <div class="title-header">
+                    <div>
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination" id="pagination">
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div style="margin: auto;" id="left_panel">
+                    <div style="width: 100%;height: 250px;padding:10px 20px 20px 20px" id="left_summary" >
+
+                    </div>
+                    <div style="width: 100%;height: 100%" id="bottom_chart">
+                        <div class="panel-header">
+                            <div class="pull-left heading-style" id="bottom_header" style="font-size: 14px">
+                                Top 5 H1B Applicants (2011-2016)
+                            </div>
+                        </div>
+                        <div style="margin: auto;" id="div_sub">
+                            <svg height="250" id="svg_sub">
+
+                            </svg>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 custom_padding">
+            <div class="bg">
+                <div class="panel-header">
+                    <div class="pull-left heading-style" id="main_header">
+                        Top 5 H1B Applicants (2011-2016)
+                    </div>
+                </div>
+                <div id="content_main">
+                    <div style="margin: auto;" id="div_main">
+                        <svg height="540" id="svg_main">
+
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog" style="width: 900px">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">About the Visualization</h4>
+            </div>
+            <div class="modal-body">
+                <p><strong><span style="font-size: 10.0pt; font-family: Helvetica; color: black;">An interactive slideshow</span></strong><span style="font-size: 10.0pt; font-family: Helvetica; color: black;"> narrative visualization structure has been used in visualization for the H1B Employment Analysis</span><span style="font-size: 10.0pt; font-family: Helvetica;">. <span style="color: black;">The left side panel has the 1-7 navigation control to navigate between the scenes. Each&nbsp;scene provides details on specific analysis using visualization.</span></span></p>
+                <p><strong><span style="font-size: 10.0pt; font-family: Helvetica; color: black;">DATA: </span></strong></p>
+                <p><span style="font-size: 10.0pt; font-family: Helvetica; color: black;">The data is taken from following public domain:</span></p>
+                <p><span style="font-size: 10.0pt; font-family: Helvetica; color: black;"><a href="https://www.kaggle.com/nsharan/h-1b-visa/downloads/h-1b-visa.zip"><span style="color: black; text-decoration: none; text-underline: none;">https://www.kaggle.com/nsharan/h-1b-visa/downloads/h-1b-visa.zip</span></a></span></p>
+                <p><span style="font-size: 10.0pt; font-family: Helvetica; color: black;"><a href="https://www.kaggle.com/nsharan/h-1b-visa">https://www.kaggle.com/nsharan/h-1b-visa</a></span></p>
+                <p><strong><span style="font-size: 10.0pt; font-family: Helvetica; color: black;">SCENES:</span></strong></p>
+                <p><span style="font-size: 10.0pt; font-family: Helvetica; color: black;">There are total 7 scenes in the interactive slideshow visualization. User can navigate between the scenes using the navigation control (1 &ndash; 7) located at the left-top header. The view and formatting is consistent across the scenes so that the user does not get dis-oriented by the graphics. The choice of colors and fonts are simple and minimalist to avoid distracting the viewer. The left panel provides more details including observations and additional visualization (scene 6 &amp; 7) and the right panel displays the main visualizations.<strong><span style="font-family: Helvetica;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></strong></span></p>
+                <p style="vertical-align: baseline;"><strong><span style="font-size: 10.0pt; font-family: Helvetica; color: black; text-transform: uppercase;">ANNOTATIONS</span></strong></p>
+                <p style="vertical-align: baseline;"><span style="font-size: 10.0pt; font-family: Helvetica; color: black;">Tooltip has been enabled for all the visualizations. On mouse-over more details will be displayed using the tooltip. Some of the visualizations have annotation built into them (scene 6 &amp; 7). In scene 6 &amp; 7 the annotation has been displayed using line and text. The line color indicates the type of the company (Outsourcing vs Product Company). The annotation of&nbsp;scene 6 has been retained in&nbsp;scene 7 to pro provide visual comparison of the different median wage between&nbsp;Outsourcing vs Product Company for 2016.</span></p>
+                <p style="vertical-align: baseline;"><strong><span style="font-size: 10.0pt; font-family: Helvetica; color: black; text-transform: uppercase;">PARAMETERS</span></strong></p>
+                <p style="vertical-align: baseline;"><span style="font-size: 10.0pt; font-family: Helvetica; color: black;">The navigation control at the top of the left panel will help the user to navigate through 7 scenes. There are additional parameters at scene 1 to hide the city details, which can be helpful to view the state level applications using Too tip. At scene 5 the reset the y scale will change the scale of the visualization based on the applications filed by the product companies. Initially the checkbox is unchecked so that the difference can be compared visually.</span></p>
+                <p style="vertical-align: baseline;"><strong><span style="font-size: 10.0pt; font-family: Helvetica; color: black; text-transform: uppercase;">TRIGGERS</span></strong></p>
+                <p><span style="font-size: 10.0pt; font-family: Helvetica; color: black;">At slide 6 &amp; 7 user can click on the individual box plot to visualize the &ldquo;Median Wage Yearly Trend</span><span style="font-size: 10.0pt; font-family: Helvetica;">&rdquo; for the specific company (which will be displayed using another line chart at the left panel). The color of the line chart will be same as the selected box plot's border color, also the company name will be displayed at the chart title. The navigation controls also act as triggers, which helps user to navigate between scenes.</span></p>
+                <p style="vertical-align: baseline;"><strong><span style="font-size: 10.0pt; font-family: Helvetica; color: black; text-transform: uppercase;">Tools</span></strong></p>
+                <p style="vertical-align: baseline;"><span style="font-size: 10.0pt; font-family: Helvetica; color: black;">D3 has been used to display all the visualizations. Additionally Bootstrap and JQuery java-script library has been used for layout and controls.</span></p>
+                <p>&nbsp;</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script type="text/babel" src="lib/app.jsx"></script>
+
+<script>
+$( document ).ready(function() {
+    loadCompanyData();
+    loadBoxPlotData();
+    loadJobData();
+    loadWageData();
+    loadMapData();
+    $("#left_summary").html(Handlebars.compile($("#page7").html()));
+    $("#main_header").html("Geographical Distribution of H1B Applications (2011-2016)");
+
+    $("#bottom_chart").hide();
+
+    $("#toggleChart1").click(function(){
+        if(document.getElementById('toggleChart1').checked) {
+            drawCircle();
+        } else {
+            console.log("hide");
+            removeCircle();
+        }
+    });
+
+    $('#pagination').bootpag({
+        total: 7
+    }).on("page", function (event, num) {
+        switch (num){
+            case 4:
+                $("#main_header").html("Top 5 H1B Applicants (2011-2016)");
+                $("#bottom_chart").hide();
+                drawAppTrend(out);
+
+                $("#left_summary").html(Handlebars.compile($("#page1").html()));
+                break;
+            case 5:
+                $("#main_header").html("Top 5 H1B Applicants - Product Development Companies (2011-2016)");
+
+                $("#bottom_chart").hide();
+                $("#svg_main").removeClass("box");
+                var template = Handlebars.compile($("#page2").html());
+                $("#left_summary").html(template);
+
+                $("#toggleChart2").click(function(){
+                    if(document.getElementById('toggleChart2').checked) {
+                        drawAppTrend(soft);
+                    } else {
+                        drawSortwithOut();
+                    }
+                });
+
+                drawSortwithOut();
+
+
+                break;
+            case 6:
+                $("#left_summary").html(Handlebars.compile($("#page3").html()));
+                $("#main_header").html("Wage Distribution of 2016 H1B Applications - Outsourcing Companies");
+                $("#bottom_chart").show();
+                drawBoxPlot(data_out,"#1575B5","box_blue",68869);
+                $('#bottom_header').html("Median Wage Yearly Trend (2011 - 2016)");
+                showMedianTrend(INFOSYS_MEDIAN,"INFOSYS","#004CD5");
+                break;
+            case 7:
+                $("#left_summary").html(Handlebars.compile($("#page4").html()));
+                $("#main_header").html("Wage Distribution of 2016 H1B Applications - Product Companies");
+                $("#bottom_chart").show();
+                drawBoxPlot(data_soft,"#a51c18","box_red",101088,68869,"#1575B5");
+                $('#bottom_header').html("Median Wage Yearly Trend (2011 - 2016)");
+                showMedianTrend(MICROSOFT_MEDIAN,"MICROSOFT","red");
+                break;
+            case 2:
+                $("#left_summary").html(Handlebars.compile($("#page5").html()));
+                $("#main_header").html("Most Applied Job Titles (2011-2016)");
+                drawJobTitle();
+                $("#bottom_chart").hide();
+                break;
+            case 3:
+                $("#left_summary").html(Handlebars.compile($("#page6").html()));
+                $("#main_header").html("Wage Distribution of the Most Applied Job Titles (2011-2016)");
+                drawWageBoxPlot();
+                $("#bottom_chart").hide();
+                break;
+            case 1:
+                $("#left_summary").html(Handlebars.compile($("#page7").html()));
+                $("#main_header").html("Geographical Distribution of H1B Applications (2011-2016)");
+                drawMap();
+                $("#bottom_chart").hide();
+
+                $("#toggleChart1").click(function(){
+                    if(document.getElementById('toggleChart1').checked) {
+                        drawCircle();
+                    } else {
+                        console.log("hide");
+                        removeCircle();
+                    }
+                });
+
+                break;
+        }
+    });
+})
+</script>
+
+<script id="page2" type="text/x-handlebars-template">
+    <div>
+        <div>
+            <H4>Product Development Companies:</H4>
+            <p style="color:#666">
+                The grouped column chart here shows the top 5 applicants
+                of the H1B program among the <b>Product Development Companies</b>.
+            </p>
+            <p style="color:#666">
+                The previous chart ( Top 5 H1B Applicants - Outsourcing Companies ) can
+                also be seen at the background. This provides a <b>visual comparison</b> of the
+                two charts.
+            </p>
+            <p style="color:#666">
+            <ul><li style="color:#666">We can see that the number of application filed by the <b>Product Development</b> Companies
+                are much lower than the Outsourcing Companies.</li></ul>
+
+            </p>
+            <p style="color:#666">
+                The Company Names are in x-axis and number of applications are in y-axis.
+                The colors of the column chart indicates different years.
+            </p>
+
+            <p style="color:#666">
+                Please click on the checkbox below to reset the y-scale of the chart according
+                to the range of the Product Development Companies.
+            </p>
+        </div>
+        <div>
+            <label><input type="checkbox" value="" id="toggleChart2"> Reset Y Scale</label>
+        </div>
+    </div>
+</script>
+
+
+<script id="page1" type="text/x-handlebars-template">
+    <div>
+        <H4>Top 5 H1B Applicants are Outsourcing Companies:</H4>
+        <p style="color:#666">
+            The grouped column chart here shows that, the top 5 applicants of the H1B program
+            from 2011 till 2016 are all Outsourcing Companies (Infosys, Tata Consultancy Services, Wipro, IBM, Accenture).
+        </p>
+        <p style="color:#666">
+        <ul style="color:#666">
+            <li>Looks like Infosys had filed maximum number of H1B applications.</li>
+            <li>Generally the number of applications increased till 2015 from 2011,
+                then there is a small dip in 2016.</li>
+        </ul>
+        </p>
+
+        <p style="color:#666">
+            The Company Names are in x-axis and number of applications are in y-axis.
+            The colors of the column chart indicates different years.
+        </p>
+        <p style="color:#666">
+            On mouse-over the tooltip will display exact number of application filed for each year.
+        </p>
+
+    </div>
+</script>
+
+<script id="page3" type="text/x-handlebars-template">
+    <div>
+        <H4 style="font-size:15px;">Wage Distribution - Outsourcing Companies:</H4>
+        <p style="color:#666;font-size:12px">
+            The box plot shows the wage distribution of the <b>outsourcing companies</b> (Also top 5 Applicants) for 2016
+            applications. On hover the box plot will display the numeric data.
+        </p>
+        <p style="color:#666;font-size:12px">
+            The median wage offered by the outsourcing companies in 2016 has been highlighted
+            using a blue horizontal line, which is <b>$68,869</b> per year.
+        </p>
+        <p style="color:#666;font-size:12px">
+            Click on any of the box plot to view the yearly trend of median wage for any
+            specific outsourcing company from 2011 - 2016 in the below line chart.
+            By default the trend of median wage offered by Infosys has been displayed.
+        </p>
+    </div>
+</script>
+
+<script id="page4" type="text/x-handlebars-template">
+    <div>
+        <H4 style="font-size:15px;">Wage Distribution - Product Companies:</H4>
+        <p style="color:#666;font-size:12px">
+            The box plot shows the wage distribution of the top 5 <b>product companies</b> for 2016
+            applications.
+        </p>
+        <p style="color:#666;font-size:12px">
+            The median wage offered by the product companies in 2016 has been highlighted
+            using a red horizontal line (blue for outsourcing companies), which is <b>$101,088</b> per year.
+        </p>
+        <p>
+            <ul><li style="color:#666;font-size:12px">The difference between the median wage offered
+        by outsourcing vs product companies is around <b>$30,000</b>.</li></ul>
+        </p>
+        <p style="color:#666;font-size:12px">
+            On hover the box plot will display the numeric data.
+            The yearly trend of median wage for specific product company will be displayed
+            in below line chart.
+        </p>
+
+    </div>
+</script>
+
+
+<script id="page5" type="text/x-handlebars-template">
+    <div>
+        <H4>Most Applied Job Titles:</H4>
+        <p style="color:#666;">
+            The bar plot shows the top 15 most applied H1B job titles from 2011 - 2016.
+        </p>
+
+        <p style="color:#666;">
+            <ul>
+                <li style="color:#666;">Most of the job
+                    titles are related to IT/Software Industry
+                </li>
+                <li style="color:#666;">Programming Analyst is the most applied job title.</li>
+            </ul>
+        </p>
+        <p style="color:#666;">
+            On hover the actual number of applications will be displayed using tooltip.
+        </p>
+    </div>
+</script>
+
+<script id="page6" type="text/x-handlebars-template">
+    <div>
+        <H4>Wage Distribution of the Most Applied Job Titles:</H4>
+        <p style="color:#666;">
+            The box plot shows the wage distribution of the 15 most applied job Titles
+            from 2011 - 2016 (previous chart).
+        </p>
+
+        <p style="color:#666;">
+            The individual box plot has been ordered from
+            High to Low median wage.
+        </p>
+
+
+        <p style="color:#666;">
+        <ul>
+            <li style="color:#666;">
+                The Senior Software Engineer has the highest median wage ($92K).
+            </li>
+            <li style="color:#666;">
+                Even though Programming Analyst was the highest applied job title,
+                the median wage is towards the lower side ($58K).</li>
+            <li style="color:#666;">
+                The median salary of assistant professor is lowest (52K) among
+                the 15 most applied job titles, however there are many outliers. This indicates
+                many assistant professor's offered wage is more then $100K</li>
+        </ul>
+        </p>
+        <p style="color:#666;">
+            On hover of the box plot, the actual numeric data will be displayed using tooltip.
+        </p>
+    </div>
+</script>
+
+
+<script id="page7" type="text/x-handlebars-template">
+    <div>
+        <H4 style="margin-top:5;margin-bottom:5px">H1B Employment Analysis:</H4>
+        <p style="color:#666;font-size:13px">
+            We will be studying the H1B application data from 2011 - 2016
+            provided by USCIS (United States Citizenship and Immigration Services).
+        </p>
+        <p style="color:#999;font-size:12px;">
+            "The US H-1B visa is a non-immigrant visa that allows US companies to
+            employ graduate level workers in specialty occupations that require
+            theoretical or technical expertise in specialized fields such as in
+            IT, finance, engineering, mathematics, science, medicine, etc." - Wikipedia
+        </p>
+        <H4>Geographical Distribution:</H4>
+        <p style="color:#666;font-size:13px">
+            The map shows the geographical distribution of H1B applications (2011 - 2016) across USA.
+        <ul>
+            <li style="color:#666;font-size:13px">Top three states with highest H1B employments are <b>New York, Texas & California.</b></li>
+            <li style="color:#666;font-size:13px">We have used log scale to display the color.</li>
+            <li style="color:#666;font-size:13px">Most of the H1B jobs are concentrated to few specific cities/areas.</li>
+        </ul>
+        </p>
+
+        <p style="color:#666;font-size:13px">
+            The color of each state is based on the number of applications (The legend is shown below the map).
+        </p>
+
+        <p style="color:#666;font-size:13px">
+            The red circles highlights <b>50</b> top city provided as employment location in H1B Applications. The size of the circles depends
+            on the number of applications.
+        </p>
+        <p style="color:#666;font-size:13px">
+            Click on the checkbox below to hide the red circles, which showing details of the cities.
+
+            <label style="padding-left:220px;padding-top:-20px"><input type="checkbox" value="" id="toggleChart1" checked="checked"> Show Top Cities </label>
+
+        </p>
+
+
+    </div>
+</script>
+
+</body>
 </html>
