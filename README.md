@@ -1,30 +1,40 @@
-## Welcome to GitHub Pages
+<html>
+<script src='https://d3js.org/d3.v5.min.js'></script>
+<style> circle {fill: lightblue; stroke: black;} </style>
+<body onload='init()'>
+<svg width=300 height=300>
+</svg>
+<script>
+async function init() {
+  const data = await d3.csv(
+    'https://flunky.github.io/cars2017.csv');
 
-You can use the [editor on GitHub](https://github.com/luwei2/dv_final/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+  var x = d3.scaleLog()
+    .domain([10, 150])
+    .range([0, 200])
+    .base(10);
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+  var y = d3.scaleLog()
+    .domain([10, 150])
+    .range([200, 0])
+    .base(10);
 
-### Markdown
+  d3.select("svg").append("g")
+  .attr("transform","translate(50,50)")
+  .selectAll("circle").data(data)
+  .enter().append("circle")
+  .attr("cx", function(d){return x(parseFloat(d.AverageCityMPG));})
+  .attr("cy", function(d){return y(parseFloat(d.AverageHighwayMPG));})
+  .attr("r", function(d){return parseFloat(d.EngineCylinders)+2;})
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
+  d3.select("svg").append("g").attr("transform","translate(50,50)")
+  .call(d3.axisLeft(y).tickValues([10,20,50,100]).tickFormat(d3.format("~s")))
+  d3.select("svg").append("g").attr("transform","translate(50,250)")
+  .call(d3.axisBottom(x).tickValues([10,20,50,100]).tickFormat(d3.format("~s")))
+}
+</script>
+</body>
+</html>
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
