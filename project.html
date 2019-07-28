@@ -28,11 +28,11 @@
 			</div>
 			<div class="section" style="width:100%; height:100%; padding-left:2.5%; padding-right:7%;">
 				<div style="float: left; width: 70%;">
-					<div style="padding-left: 140px; font-size: 20px; font-weight: bold;">Fertility Rate and GDP per capita in <span id="title">1960</span><br/><br/></div>
+					<div style="padding-left: 140px; font-size: 20px; font-weight: bold;">Fertility Rate and GDP per capita in <span id="title">1990</span><br/><br/></div>
 					<div style="padding-left: 55px;">
 						<button name="play" id="play">Play</button>&nbsp;&nbsp;&nbsp;&nbsp;
-						<input id="slider" style="width:400px;" type="range" min="1960" max="2015" value="1960" step="1" />
-						<span id="range">1960</span><br/><br/>
+						<input id="slider" style="width:400px;" type="range" min="1990" max="2017" value="1990" step="1" />
+						<span id="range">1990</span><br/><br/>
 					</div>
 					<svg id="FertilityRateVsGDP" width="800" height="450"></svg>
 				</div>
@@ -441,7 +441,7 @@
 			// ******** Scatter plot graph creation *********
 
 			// Source of information
-			d3.csv("https://fvargaspiedra.github.io/FRandGDP.csv", function(data) {	
+			d3.csv("https://raw.githubusercontent.com/luwei2/dv_final/master/LifevsGCP.csv", function(data) {	
 
 				// Fertility Rate and GDP to number
 				data.forEach(function(d) {
@@ -634,8 +634,8 @@
 				$("button").on("click", function() {
 
 					var duration = 300,
-					maxstep = 2015,
-					minstep = 1960;
+					maxstep = 2017,
+					minstep = 1990;
 
 					if (running == true) {
 						$("button").html("Play");
@@ -710,4 +710,5 @@
 			});	
 		</script>
 	</body>
+</html>
 </html>
