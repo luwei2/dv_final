@@ -1,4 +1,4 @@
-Country_Name,Country_Code,Region,Year,Life_Expectancy,GDP_Per_Capita
+Country_Name,Country_Code,Region,Year,Fertility_Rate,GDP_Per_Capita
 Aruba,ABW,Latin America and Caribbean,1990,73.468,22030.08801
 Aruba,ABW,Latin America and Caribbean,1991,73.509,24157.84606
 Aruba,ABW,Latin America and Caribbean,1992,73.544,25143.24215
@@ -2519,34 +2519,6 @@ India,IND,South Asia,2014,68.021,96232.7804
 India,IND,South Asia,2015,68.302,105116.5792
 India,IND,South Asia,2016,68.56,115985.4647
 India,IND,South Asia,2017,68.803,127702.4763
-Not classified,INX,#N/A,1990,-1,-1
-Not classified,INX,#N/A,1991,-1,-1
-Not classified,INX,#N/A,1992,-1,-1
-Not classified,INX,#N/A,1993,-1,-1
-Not classified,INX,#N/A,1994,-1,-1
-Not classified,INX,#N/A,1995,-1,-1
-Not classified,INX,#N/A,1996,-1,-1
-Not classified,INX,#N/A,1997,-1,-1
-Not classified,INX,#N/A,1998,-1,-1
-Not classified,INX,#N/A,1999,-1,-1
-Not classified,INX,#N/A,2000,-1,-1
-Not classified,INX,#N/A,2001,-1,-1
-Not classified,INX,#N/A,2002,-1,-1
-Not classified,INX,#N/A,2003,-1,-1
-Not classified,INX,#N/A,2004,-1,-1
-Not classified,INX,#N/A,2005,-1,-1
-Not classified,INX,#N/A,2006,-1,-1
-Not classified,INX,#N/A,2007,-1,-1
-Not classified,INX,#N/A,2008,-1,-1
-Not classified,INX,#N/A,2009,-1,-1
-Not classified,INX,#N/A,2010,-1,-1
-Not classified,INX,#N/A,2011,-1,-1
-Not classified,INX,#N/A,2012,-1,-1
-Not classified,INX,#N/A,2013,-1,-1
-Not classified,INX,#N/A,2014,-1,-1
-Not classified,INX,#N/A,2015,-1,-1
-Not classified,INX,#N/A,2016,-1,-1
-Not classified,INX,#N/A,2017,-1,-1
 Ireland,IRL,Europe and Central Asia,1990,74.80909756,10784.73113
 Ireland,IRL,Europe and Central Asia,1991,75.00526829,11126.70736
 Ireland,IRL,Europe and Central Asia,1992,75.18095122,11741.69013
