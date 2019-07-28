@@ -1,0 +1,91 @@
+#footer{
+  position:fixed;
+  height: 30px;
+  display:block;
+  width: 230px;
+  background: #333;
+  opacity: 0.8;
+  z-index:9;
+  text-align:center;
+  color: #f2f2f2;
+  padding: 10px 0 0 0;
+  bottom:0px;
+  border-top-right-radius: 8px;
+  text-decoration: none;
+}
+
+#footer:hover {
+  opacity: 1;
+  background-color: #0099e6;
+}
+
+.tooltip {
+  position: absolute;
+  text-align: left;
+  padding: 8px;
+  font-size: 10.5px;
+  font-family: 'Oxigen', sans-serif;
+  color: #595959;
+  background: #e6e6e6;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #808080;
+  border-radius: 2.5px;
+  pointer-events: none;
+}
+
+.legend {
+  font-size: 13px;
+  text-shadow: 2px 2px 2px #aaa;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.grid line {
+  stroke: lightgrey;
+  stroke-opacity: 0.7;
+  shape-rendering: crispEdges;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+.bodyText {
+  font-size: 13.5px;
+  font-family: 'Raleway', sans-serif;
+/*  -webkit-margin-before: 0.2em;
+  -webkit-margin-after: 0.2em;*/
+  color:#404040;
+  text-align: justify;
+}
+
+#play {
+  display: inline-block;
+  width: 60px;
+  padding: 8px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #07a1df;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 3px #999;
+}
+
+#play:hover {background-color: #045a7c}
+
+#play:active {
+  background-color: #045a7c;
+  box-shadow: 0 1px #666;
+  transform: translateY(2px);
+}
+
+#sectionImage1{
+    background-image: url(https://fvargaspiedra.github.io/PregnantWoman.png);
+}
