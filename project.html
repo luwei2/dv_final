@@ -28,18 +28,18 @@
 			</div>
 			<div class="section" style="width:100%; height:100%; padding-left:2.5%; padding-right:7%;">
 				<div style="float: left; width: 70%;">
-					<div style="padding-left: 140px; font-size: 20px; font-weight: bold;">Fertility Rate and GDP per capita in <span id="title">1960</span><br/><br/></div>
+					<div style="padding-left: 140px; font-size: 20px; font-weight: bold;">Fertility Rate and GDP per capita in <span id="title">1990</span><br/><br/></div>
 					<div style="padding-left: 55px;">
 						<button name="play" id="play">Play</button>&nbsp;&nbsp;&nbsp;&nbsp;
-						<input id="slider" style="width:400px;" type="range" min="1960" max="2015" value="1960" step="1" />
-						<span id="range">1960</span><br/><br/>
+						<input id="slider" style="width:400px;" type="range" min="1990" max="2017" value="1990" step="1" />
+						<span id="range">1990</span><br/><br/>
 					</div>
 					<svg id="FertilityRateVsGDP" width="800" height="450"></svg>
 				</div>
 				<div style="float: right; width: 30%;">
 					<p style="font-size: 60px; font-weight: bold; color:#1a1a1a;">Economy<br/></p>
 					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Explore over time</p>
-					<p class="bodyText">Now that you have seen an overview of Fertility Rate behavior over time, take this opportunity to dive deeper on the relation between Fertility Rate and GDP per capita from 1960 to 2015. It looks like there is a correlation between these two elements, year by year GDP per capita grows and Fertility Rate diminishes. There is a concerning situation in Africa, where Fertility Rate is pretty high and GDP per capita pretty low. What do you think? Draw your own inferences.</p>
+					<p class="bodyText">Now that you have seen an overview of Fertility Rate behavior over time, take this opportunity to dive deeper on the relation between Fertility Rate and GDP per capita from 1990 to 2017. It looks like there is a correlation between these two elements, year by year GDP per capita grows and Fertility Rate diminishes. There is a concerning situation in Africa, where Fertility Rate is pretty high and GDP per capita pretty low. What do you think? Draw your own inferences.</p>
 					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">What can you do?</p>
 					<p class="bodyText">Filter by clicking on any element in the legend. You can also see an animation year by year by clicking on Play button or just move the slider to inspect a specific year. You can also check each point&#39;s tooltip to get a deeper insight. The size of the circles is proportional to GDP per capita to remark the difference in the graph.</p>
 				</div>
@@ -441,11 +441,11 @@
 			// ******** Scatter plot graph creation *********
 
 			// Source of information
-			d3.csv("https://fvargaspiedra.github.io/FRandGDP.csv", function(data) {	
+			d3.csv("https://raw.githubusercontent.com/luwei2/dv_final/master/LifevsGCP.csv", function(data) {	
 
 				// Fertility Rate and GDP to number
 				data.forEach(function(d) {
-					d.Fertility_Rate = +d.Fertility_Rate;
+					d.Life_Expectancy = +d.Life_Expectancy;
 					d.GDP_Per_Capita = +d.GDP_Per_Capita;
 				});
 
@@ -461,7 +461,7 @@
 
 				// Set domain for ranges dynamically based on data
 				xScale_3.domain([d3.min(data, function(d) { return d.GDP_Per_Capita; }) - 100, d3.max(data, function(d) { return d.GDP_Per_Capita; }) + 5000])
-				yScale_3.domain([0, d3.max(data, function(d) { return d.Fertility_Rate; }) + 1]);
+				yScale_3.domain([0, d3.max(data, function(d) { return d.Life_Expectancy; }) + 1]);
 
 				// Add the grid lines to X-Axis
 				points_3.append("g")			
@@ -497,24 +497,24 @@
 							// The dataset has -1 when value is not present, for those cases
 							// we create the dot but it's invisible.
 							.attr("r", function(v) {
-								if(v.GDP_Per_Capita == -1 || v.Fertility_Rate == -1) {
+								if(v.GDP_Per_Capita == -1 || v.Life_Expectancy == -1) {
 									return 0;
 								} else {
 									return (v.GDP_Per_Capita * 12 / maxGDP) + 1;
 								} 
 							})
 							.attr("cx", function(v) { 
-								if(v.GDP_Per_Capita == -1 || v.Fertility_Rate == -1) {
+								if(v.GDP_Per_Capita == -1 || v.Life_Expectancy == -1) {
 									return 0;
 								} else {
 									return xScale_3(v.GDP_Per_Capita);
 								}
 							})
 							.attr("cy", function(v) {
-								if(v.GDP_Per_Capita == -1 || v.Fertility_Rate == -1) {
+								if(v.GDP_Per_Capita == -1 || v.Life_Expectancy == -1) {
 									return 0;
 								} else {
-									return yScale_3(v.Fertility_Rate);
+									return yScale_3(v.Life_Expectancy);
 								}
 							})
 							.classed("line_3", true)
@@ -524,7 +524,7 @@
 								div_3.transition()
 									.duration(200)
 									.style("opacity", .9);
-								div_3.html("<b style='font-size:12px; color:#333333'>" + v.Country_Name + "</b><br/><b>Fertility Rate: </b>" + v.Fertility_Rate + "<br/><b>GDP Per Capita: </b>" + v.GDP_Per_Capita)
+								div_3.html("<b style='font-size:12px; color:#333333'>" + v.Country_Name + "</b><br/><b>Life Expectancy: </b>" + v.Life_Expectancy + "<br/><b>GDP Per Capita: </b>" + v.GDP_Per_Capita)
 									.style("left", (d3.event.pageX) + "px")
 									.style("top", (d3.event.pageY - 28) + "px");
 							})
@@ -622,7 +622,7 @@
 				vis_3.append("text")
 					.attr("transform", "rotate(-90), translate(" + (-1 * HEIGHT_3 / 2 ) + ", 20)")
 					.style("text-anchor", "middle")
-					.text("Fertility Rate (births per woman)");    
+					.text("Life Expectancy (births per woman)");    
 	
 				// Boolean variable to control whether Play was pressed or not
 				var running = false;
@@ -634,8 +634,8 @@
 				$("button").on("click", function() {
 
 					var duration = 300,
-					maxstep = 2015,
-					minstep = 1960;
+					maxstep = 2017,
+					minstep = 1990;
 
 					if (running == true) {
 						$("button").html("Play");
@@ -684,24 +684,24 @@
 								// The dataset has -1 when value is not present, for those cases
 								// we create the dot but it's invisible.
 								.attr("r", function(v) {
-									if(v.GDP_Per_Capita == -1 || v.Fertility_Rate == -1) {
+									if(v.GDP_Per_Capita == -1 || v.Life_Expectancy == -1) {
 										return 0;
 									} else {
 										return (v.GDP_Per_Capita * 12 / maxGDP) + 1;
 									} 
 								})
 								.attr("cx", function(v) { 
-									if(v.GDP_Per_Capita == -1 || v.Fertility_Rate == -1) {
+									if(v.GDP_Per_Capita == -1 || v.Life_Expectancy == -1) {
 										return 0;
 									} else {
 										return xScale_3(v.GDP_Per_Capita);
 									}
 								})
 								.attr("cy", function(v) {
-									if(v.GDP_Per_Capita == -1 || v.Fertility_Rate == -1) {
+									if(v.GDP_Per_Capita == -1 || v.Life_Expectancy == -1) {
 										return 0;
 									} else {
-										return yScale_3(v.Fertility_Rate);
+										return yScale_3(v.Life_Expectancy);
 									}
 								});
 						}
