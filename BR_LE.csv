@@ -1,218 +1,218 @@
 Country_Name,Country_Code,Region,Year,Fertility_Rate,Happiness_Score
-Aruba,ABW,Latin America and Caribbean,2017,11.004,76.01
-Afghanistan,AFG,South Asia,2017,32.507,64.047
-Angola,AGO,Sub-Saharan Africa,2017,41.347,61.809
-Albania,ALB,Europe and Central Asia,2017,11.745,78.495
+Aruba,ABW,Latin America and Caribbean,2017,11.004,-1
+Afghanistan,AFG,South Asia,2017,32.507,0.50999999
+Angola,AGO,Sub-Saharan Africa,2017,41.347,4.284999847
+Albania,ALB,Europe and Central Asia,2017,11.745,2.410000086
 Andorra,AND,Europe and Central Asia,2017,-1,-1
-United Arab Emirates,ARE,Middle East and North Africa,2017,9.328,77.412
-Argentina,ARG,Latin America and Caribbean,2017,16.975,76.738
-Armenia,ARM,Europe and Central Asia,2017,13.092,74.782
+United Arab Emirates,ARE,Middle East and North Africa,2017,9.328,2.756000042
+Argentina,ARG,Latin America and Caribbean,2017,16.975,3.834000111
+Armenia,ARM,Europe and Central Asia,2017,13.092,1.055999994
 American Samoa,ASM,East Asia and Pacific,2017,-1,-1
-Antigua and Barbuda,ATG,Latin America and Caribbean,2017,16.089,76.519
-Australia,AUS,East Asia and Pacific,2017,12.4,82.49756098
-Austria,AUT,Europe and Central Asia,2017,10,81.64146341
-Azerbaijan,AZE,Europe and Central Asia,2017,14.6,72.123
-Burundi,BDI,Sub-Saharan Africa,2017,41.763,57.857
-Belgium,BEL,Europe and Central Asia,2017,10.5,81.43902439
-Benin,BEN,Sub-Saharan Africa,2017,36.622,61.171
-Burkina Faso,BFA,Sub-Saharan Africa,2017,38.42,60.77
-Bangladesh,BGD,South Asia,2017,18.613,72.808
-Bulgaria,BGR,Europe and Central Asia,2017,9,74.81219512
-Bahrain,BHR,Middle East and North Africa,2017,14.402,77.038
-"Bahamas, The",BHS,Latin America and Caribbean,2017,14.126,75.823
-Bosnia and Herzegovina,BIH,Europe and Central Asia,2017,9.207,77.087
-Belarus,BLR,Europe and Central Asia,2017,10.8,74.12926829
-Belize,BLZ,Latin America and Caribbean,2017,22.312,70.588
-Bermuda,BMU,North America,2017,9.3,81.44195122
-Bolivia,BOL,Latin America and Caribbean,2017,22.968,69.473
-Brazil,BRA,Latin America and Caribbean,2017,13.918,75.723
-Barbados,BRB,Latin America and Caribbean,2017,11.819,76.057
-Brunei Darussalam,BRN,East Asia and Pacific,2017,15.575,77.374
-Bhutan,BTN,South Asia,2017,17.879,70.565
-Botswana,BWA,Sub-Saharan Africa,2017,23.162,67.618
-Central African Republic,CAF,Sub-Saharan Africa,2017,35.328,52.89
-Canada,CAN,North America,2017,10.3,82.4704878
-Switzerland,CHE,Europe and Central Asia,2017,10.3,83.60243902
-Channel Islands,CHI,Europe and Central Asia,2017,9.282,81.255
-Chile,CHL,Latin America and Caribbean,2017,13.135,79.732
-China,CHN,East Asia and Pacific,2017,12.43,76.41
-Cote d'Ivoire,CIV,Sub-Saharan Africa,2017,36.553,54.102
-Cameroon,CMR,Sub-Saharan Africa,2017,35.768,58.575
-"Congo, Dem. Rep.",COD,Sub-Saharan Africa,2017,41.734,60.031
-"Congo, Rep.",COG,Sub-Saharan Africa,2017,34.059,65.088
-Colombia,COL,Latin America and Caribbean,2017,14.925,74.562
-Comoros,COM,Sub-Saharan Africa,2017,32.365,63.912
-Cabo Verde,CPV,Sub-Saharan Africa,2017,20.661,73.004
-Costa Rica,CRI,Latin America and Caribbean,2017,14.056,80.03
-Cuba,CUB,Latin America and Caribbean,2017,10.751,79.921
-Curacao,CUW,Latin America and Caribbean,2017,9.7,78.01707317
+Antigua and Barbuda,ATG,Latin America and Caribbean,2017,16.089,-1
+Australia,AUS,East Asia and Pacific,2017,12.4,6.159999847
+Austria,AUT,Europe and Central Asia,2017,10,4.65199995
+Azerbaijan,AZE,Europe and Central Asia,2017,14.6,13.16399956
+Burundi,BDI,Sub-Saharan Africa,2017,41.763,0.074000001
+Belgium,BEL,Europe and Central Asia,2017,10.5,4.090000153
+Benin,BEN,Sub-Saharan Africa,2017,36.622,1.289999962
+Burkina Faso,BFA,Sub-Saharan Africa,2017,38.42,0.674000025
+Bangladesh,BGD,South Asia,2017,18.613,4.465000153
+Bulgaria,BGR,Europe and Central Asia,2017,9,3.644999981
+Bahrain,BHR,Middle East and North Africa,2017,14.402,1.68900001
+"Bahamas, The",BHS,Latin America and Caribbean,2017,14.126,4.495999813
+Bosnia and Herzegovina,BIH,Europe and Central Asia,2017,9.207,5.169000149
+Belarus,BLR,Europe and Central Asia,2017,10.8,0.89200002
+Belize,BLZ,Latin America and Caribbean,2017,22.312,6.717999935
+Bermuda,BMU,North America,2017,9.3,-1
+Bolivia,BOL,Latin America and Caribbean,2017,22.968,4.321000099
+Brazil,BRA,Latin America and Caribbean,2017,13.918,4.721000195
+Barbados,BRB,Latin America and Caribbean,2017,11.819,0.861000001
+Brunei Darussalam,BRN,East Asia and Pacific,2017,15.575,2.818000078
+Bhutan,BTN,South Asia,2017,17.879,0.097999997
+Botswana,BWA,Sub-Saharan Africa,2017,23.162,2.703999996
+Central African Republic,CAF,Sub-Saharan Africa,2017,35.328,0.94599998
+Canada,CAN,North America,2017,10.3,4.499000072
+Switzerland,CHE,Europe and Central Asia,2017,10.3,5.816999912
+Channel Islands,CHI,Europe and Central Asia,2017,9.282,4.554999828
+Chile,CHL,Latin America and Caribbean,2017,13.135,4.453000069
+China,CHN,East Asia and Pacific,2017,12.43,3.062000036
+Cote d'Ivoire,CIV,Sub-Saharan Africa,2017,36.553,1.975999951
+Cameroon,CMR,Sub-Saharan Africa,2017,35.768,3.094000101
+"Congo, Dem. Rep.",COD,Sub-Saharan Africa,2017,41.734,1.988999963
+"Congo, Rep.",COG,Sub-Saharan Africa,2017,34.059,1.100000024
+Colombia,COL,Latin America and Caribbean,2017,14.925,4.061999798
+Comoros,COM,Sub-Saharan Africa,2017,32.365,5.065000057
+Cabo Verde,CPV,Sub-Saharan Africa,2017,20.661,4.843999863
+Costa Rica,CRI,Latin America and Caribbean,2017,14.056,4.076000214
+Cuba,CUB,Latin America and Caribbean,2017,10.751,1.340999961
+Curacao,CUW,Latin America and Caribbean,2017,9.7,-1
 Cayman Islands,CYM,Latin America and Caribbean,2017,9.902558821,-1
-Cyprus,CYP,Europe and Central Asia,2017,10.672,80.67
-Czech Republic,CZE,Europe and Central Asia,2017,10.8,79.47560976
-Germany,DEU,Europe and Central Asia,2017,9.5,80.9902439
-Djibouti,DJI,Middle East and North Africa,2017,22.66,62.643
+Cyprus,CYP,Europe and Central Asia,2017,10.672,2.092999935
+Czech Republic,CZE,Europe and Central Asia,2017,10.8,3.137000084
+Germany,DEU,Europe and Central Asia,2017,9.5,4.361000061
+Djibouti,DJI,Middle East and North Africa,2017,22.66,2.253999949
 Dominica,DMA,Latin America and Caribbean,2017,-1,-1
-Denmark,DNK,Europe and Central Asia,2017,10.6,81.00487805
-Dominican Republic,DOM,Latin America and Caribbean,2017,19.832,74.048
-Algeria,DZA,Middle East and North Africa,2017,22.292,76.293
-Ecuador,ECU,Latin America and Caribbean,2017,19.872,76.551
-"Egypt, Arab Rep.",EGY,Middle East and North Africa,2017,25.691,71.661
-Eritrea,ERI,Sub-Saharan Africa,2017,31.59,65.536
-Spain,ESP,Europe and Central Asia,2017,8.4,83.32926829
-Estonia,EST,Europe and Central Asia,2017,10.5,77.64146341
-Ethiopia,ETH,Sub-Saharan Africa,2017,31.255,65.874
-Finland,FIN,Europe and Central Asia,2017,9.1,81.42926829
-Fiji,FJI,East Asia and Pacific,2017,19.041,70.417
-France,FRA,Europe and Central Asia,2017,11.4,82.52439024
-Faroe Islands,FRO,Europe and Central Asia,2017,13.1,82.4
-"Micronesia, Fed. Sts.",FSM,East Asia and Pacific,2017,23.774,69.316
-Gabon,GAB,Sub-Saharan Africa,2017,28.901,66.48
-United Kingdom,GBR,Europe and Central Asia,2017,11.4,81.15609756
-Georgia,GEO,Europe and Central Asia,2017,13.18,73.436
-Ghana,GHA,Sub-Saharan Africa,2017,30.52,63.033
+Denmark,DNK,Europe and Central Asia,2017,10.6,3.112999916
+Dominican Republic,DOM,Latin America and Caribbean,2017,19.832,3.424000025
+Algeria,DZA,Middle East and North Africa,2017,22.292,4.170000076
+Ecuador,ECU,Latin America and Caribbean,2017,19.872,2.976000071
+"Egypt, Arab Rep.",EGY,Middle East and North Africa,2017,25.691,10.37800026
+Eritrea,ERI,Sub-Saharan Africa,2017,31.59,1.108999968
+Spain,ESP,Europe and Central Asia,2017,8.4,5.105000019
+Estonia,EST,Europe and Central Asia,2017,10.5,4.666999817
+Ethiopia,ETH,Sub-Saharan Africa,2017,31.255,0.532000005
+Finland,FIN,Europe and Central Asia,2017,9.1,3.931999922
+Fiji,FJI,East Asia and Pacific,2017,19.041,1.194000006
+France,FRA,Europe and Central Asia,2017,11.4,4.176000118
+Faroe Islands,FRO,Europe and Central Asia,2017,13.1,-1
+"Micronesia, Fed. Sts.",FSM,East Asia and Pacific,2017,23.774,-1
+Gabon,GAB,Sub-Saharan Africa,2017,28.901,2.420000076
+United Kingdom,GBR,Europe and Central Asia,2017,11.4,2.384000063
+Georgia,GEO,Europe and Central Asia,2017,13.18,1.993000031
+Ghana,GHA,Sub-Saharan Africa,2017,30.52,5.632999897
 Gibraltar,GIB,Europe and Central Asia,2017,-1,-1
-Guinea,GIN,Sub-Saharan Africa,2017,35.468,60.617
-"Gambia, The",GMB,Sub-Saharan Africa,2017,38.965,61.424
-Guinea-Bissau,GNB,Sub-Saharan Africa,2017,35.988,57.805
-Equatorial Guinea,GNQ,Sub-Saharan Africa,2017,33.616,57.939
-Greece,GRC,Europe and Central Asia,2017,8.2,81.38780488
-Grenada,GRD,Latin America and Caribbean,2017,18.359,73.78
+Guinea,GIN,Sub-Saharan Africa,2017,35.468,1.697999954
+"Gambia, The",GMB,Sub-Saharan Africa,2017,38.965,1.483999968
+Guinea-Bissau,GNB,Sub-Saharan Africa,2017,35.988,1.075999975
+Equatorial Guinea,GNQ,Sub-Saharan Africa,2017,33.616,1.820000052
+Greece,GRC,Europe and Central Asia,2017,8.2,7.31099987
+Grenada,GRD,Latin America and Caribbean,2017,18.359,-1
 Greenland,GRL,Europe and Central Asia,2017,15.2,-1
-Guatemala,GTM,Latin America and Caribbean,2017,24.916,73.654
-Guam,GUM,East Asia and Pacific,2017,16.667,79.763
-Guyana,GUY,Latin America and Caribbean,2017,20.389,66.766
-"Hong Kong SAR, China",HKG,East Asia and Pacific,2017,7.7,84.6804878
-Honduras,HND,Latin America and Caribbean,2017,21.418,73.774
-Croatia,HRV,Europe and Central Asia,2017,8.9,77.82682927
-Haiti,HTI,Latin America and Caribbean,2017,23.821,63.589
-Hungary,HUN,Europe and Central Asia,2017,9.7,76.06341463
-Indonesia,IDN,East Asia and Pacific,2017,18.624,69.355
+Guatemala,GTM,Latin America and Caribbean,2017,24.916,2.927000046
+Guam,GUM,East Asia and Pacific,2017,16.667,3.384000063
+Guyana,GUY,Latin America and Caribbean,2017,20.389,3.750999928
+"Hong Kong SAR, China",HKG,East Asia and Pacific,2017,7.7,2.78399992
+Honduras,HND,Latin America and Caribbean,2017,21.418,11.60099983
+Croatia,HRV,Europe and Central Asia,2017,8.9,4.829999924
+Haiti,HTI,Latin America and Caribbean,2017,23.821,1.305999994
+Hungary,HUN,Europe and Central Asia,2017,9.7,4.631999969
+Indonesia,IDN,East Asia and Pacific,2017,18.624,3.421000004
 Isle of Man,IMN,Europe and Central Asia,2017,-1,-1
-India,IND,South Asia,2017,18.782,68.803
-Ireland,IRL,Europe and Central Asia,2017,12.9,81.95609756
-"Iran, Islamic Rep.",IRN,Middle East and North Africa,2017,15.922,76.153
-Iraq,IRQ,Middle East and North Africa,2017,32.768,70.038
-Iceland,ISL,Europe and Central Asia,2017,11.9,82.20487805
-Israel,ISR,Middle East and North Africa,2017,21.1,82.60243902
-Italy,ITA,Europe and Central Asia,2017,7.6,83.24390244
-Jamaica,JAM,Latin America and Caribbean,2017,16.434,76.097
-Jordan,JOR,Middle East and North Africa,2017,25.883,74.476
-Japan,JPN,East Asia and Pacific,2017,7.6,84.0997561
-Kazakhstan,KAZ,Europe and Central Asia,2017,21.64,72.95
-Kenya,KEN,Sub-Saharan Africa,2017,30.876,67.291
-Kyrgyz Republic,KGZ,Europe and Central Asia,2017,24.8,71.2
-Cambodia,KHM,East Asia and Pacific,2017,22.886,69.331
-Kiribati,KIR,East Asia and Pacific,2017,27.871,66.506
+India,IND,South Asia,2017,18.782,1.605000019
+Ireland,IRL,Europe and Central Asia,2017,12.9,4.453999996
+"Iran, Islamic Rep.",IRN,Middle East and North Africa,2017,15.922,3.828999996
+Iraq,IRQ,Middle East and North Africa,2017,32.768,3.312000036
+Iceland,ISL,Europe and Central Asia,2017,11.9,3.852999926
+Israel,ISR,Middle East and North Africa,2017,21.1,4.133999825
+Italy,ITA,Europe and Central Asia,2017,7.6,6.15500021
+Jamaica,JAM,Latin America and Caribbean,2017,16.434,3.585000038
+Jordan,JOR,Middle East and North Africa,2017,25.883,5.842999935
+Japan,JPN,East Asia and Pacific,2017,7.6,1.975999951
+Kazakhstan,KAZ,Europe and Central Asia,2017,21.64,1.34800005
+Kenya,KEN,Sub-Saharan Africa,2017,30.876,7.953999996
+Kyrgyz Republic,KGZ,Europe and Central Asia,2017,24.8,1.595000029
+Cambodia,KHM,East Asia and Pacific,2017,22.886,0.405999988
+Kiribati,KIR,East Asia and Pacific,2017,27.871,-1
 St. Kitts and Nevis,KNA,Latin America and Caribbean,2017,-1,-1
-"Korea, Rep.",KOR,East Asia and Pacific,2017,7,82.62682927
-Kuwait,KWT,Middle East and North Africa,2017,15.974,74.811
-Lao PDR,LAO,East Asia and Pacific,2017,23.383,67.021
-Lebanon,LBN,Middle East and North Africa,2017,15.497,79.758
-Liberia,LBR,Sub-Saharan Africa,2017,33.936,63.006
-Libya,LBY,Middle East and North Africa,2017,19.125,72.11
-St. Lucia,LCA,Latin America and Caribbean,2017,11.975,75.696
-Liechtenstein,LIE,Europe and Central Asia,2017,8.9,82.25853659
-Sri Lanka,LKA,South Asia,2017,15.002,75.485
-Lesotho,LSO,Sub-Saharan Africa,2017,27.532,54.568
-Lithuania,LTU,Europe and Central Asia,2017,10.1,74.67073171
-Luxembourg,LUX,Europe and Central Asia,2017,10.4,82.68536585
-Latvia,LVA,Europe and Central Asia,2017,10.7,74.6804878
-"Macao SAR, China",MAC,East Asia and Pacific,2017,12.213,83.991
-St. Martin (French part),MAF,Latin America and Caribbean,2017,14.9,79.72195122
-Morocco,MAR,Middle East and North Africa,2017,19.5,76.059
+"Korea, Rep.",KOR,East Asia and Pacific,2017,7,1.754999995
+Kuwait,KWT,Middle East and North Africa,2017,15.974,0.681999981
+Lao PDR,LAO,East Asia and Pacific,2017,23.383,0.542999983
+Lebanon,LBN,Middle East and North Africa,2017,15.497,9.36400032
+Liberia,LBR,Sub-Saharan Africa,2017,33.936,2.056999922
+Libya,LBY,Middle East and North Africa,2017,19.125,0.906000018
+St. Lucia,LCA,Latin America and Caribbean,2017,11.975,5.847000122
+Liechtenstein,LIE,Europe and Central Asia,2017,8.9,-1
+Sri Lanka,LKA,South Asia,2017,15.002,3.015000105
+Lesotho,LSO,Sub-Saharan Africa,2017,27.532,0.68599999
+Lithuania,LTU,Europe and Central Asia,2017,10.1,2.443000078
+Luxembourg,LUX,Europe and Central Asia,2017,10.4,3.572999954
+Latvia,LVA,Europe and Central Asia,2017,10.7,4.678999901
+"Macao SAR, China",MAC,East Asia and Pacific,2017,12.213,3.079999924
+St. Martin (French part),MAF,Latin America and Caribbean,2017,14.9,-1
+Morocco,MAR,Middle East and North Africa,2017,19.5,2.592999935
 Monaco,MCO,Europe and Central Asia,2017,-1,-1
-Moldova,MDA,Europe and Central Asia,2017,10.105,71.718
-Madagascar,MDG,Sub-Saharan Africa,2017,32.9,66.312
-Maldives,MDV,South Asia,2017,17.664,77.649
-Mexico,MEX,Latin America and Caribbean,2017,17.83,77.305
+Moldova,MDA,Europe and Central Asia,2017,10.105,0.340999991
+Madagascar,MDG,Sub-Saharan Africa,2017,32.9,3.83100009
+Maldives,MDV,South Asia,2017,17.664,4.146999836
+Mexico,MEX,Latin America and Caribbean,2017,17.83,4.55700016
 Marshall Islands,MHL,East Asia and Pacific,2017,-1,-1
-North Macedonia,MKD,Europe and Central Asia,2017,11.237,75.851
-Mali,MLI,Sub-Saharan Africa,2017,42.076,58.456
-Malta,MLT,Middle East and North Africa,2017,9.2,82.45365854
-Myanmar,MMR,East Asia and Pacific,2017,17.615,66.744
-Montenegro,MNE,Europe and Central Asia,2017,11.224,77.271
-Mongolia,MNG,East Asia and Pacific,2017,23.103,69.465
+North Macedonia,MKD,Europe and Central Asia,2017,11.237,4.487999916
+Mali,MLI,Sub-Saharan Africa,2017,42.076,0.579999983
+Malta,MLT,Middle East and North Africa,2017,9.2,4.71600008
+Myanmar,MMR,East Asia and Pacific,2017,17.615,2.930000067
+Montenegro,MNE,Europe and Central Asia,2017,11.224,8.585000038
+Mongolia,MNG,East Asia and Pacific,2017,23.103,0.981999993
 Northern Mariana Islands,MNP,East Asia and Pacific,2017,-1,-1
-Mozambique,MOZ,Sub-Saharan Africa,2017,38.557,58.872
-Mauritania,MRT,Sub-Saharan Africa,2017,33.726,63.384
-Mauritius,MUS,Sub-Saharan Africa,2017,10.7,74.51463415
-Malawi,MWI,Sub-Saharan Africa,2017,36.399,63.671
-Malaysia,MYS,East Asia and Pacific,2017,16.997,75.452
-Namibia,NAM,Sub-Saharan Africa,2017,28.723,64.85
-New Caledonia,NCL,East Asia and Pacific,2017,14.5,77.14878049
-Niger,NER,Sub-Saharan Africa,2017,47.838,60.422
-Nigeria,NGA,Sub-Saharan Africa,2017,38.4,53.875
-Nicaragua,NIC,Latin America and Caribbean,2017,19.104,75.653
-Netherlands,NLD,Europe and Central Asia,2017,9.9,81.56097561
-Norway,NOR,Europe and Central Asia,2017,10.7,82.5097561
-Nepal,NPL,South Asia,2017,19.49,70.604
+Mozambique,MOZ,Sub-Saharan Africa,2017,38.557,2.407999992
+Mauritania,MRT,Sub-Saharan Africa,2017,33.726,2.690000057
+Mauritius,MUS,Sub-Saharan Africa,2017,10.7,4.302000046
+Malawi,MWI,Sub-Saharan Africa,2017,36.399,1.138000011
+Malaysia,MYS,East Asia and Pacific,2017,16.997,3.453000069
+Namibia,NAM,Sub-Saharan Africa,2017,28.723,4.522999763
+New Caledonia,NCL,East Asia and Pacific,2017,14.5,4.178999901
+Niger,NER,Sub-Saharan Africa,2017,47.838,0.90200001
+Nigeria,NGA,Sub-Saharan Africa,2017,38.4,3.063999891
+Nicaragua,NIC,Latin America and Caribbean,2017,19.104,5.447999954
+Netherlands,NLD,Europe and Central Asia,2017,9.9,3.976999998
+Norway,NOR,Europe and Central Asia,2017,10.7,1.782999992
+Nepal,NPL,South Asia,2017,19.49,1.026000023
 Nauru,NRU,East Asia and Pacific,2017,-1,-1
-New Zealand,NZL,East Asia and Pacific,2017,12.43,81.65853659
-Oman,OMN,Middle East and North Africa,2017,17.854,77.258
-Pakistan,PAK,South Asia,2017,27.7,66.629
-Panama,PAN,Latin America and Caribbean,2017,19.218,78.195
-Peru,PER,Latin America and Caribbean,2017,18.936,75.22
-Philippines,PHL,East Asia and Pacific,2017,22.975,69.238
+New Zealand,NZL,East Asia and Pacific,2017,12.43,6.179999828
+Oman,OMN,Middle East and North Africa,2017,17.854,1.245000005
+Pakistan,PAK,South Asia,2017,27.7,1.340000033
+Panama,PAN,Latin America and Caribbean,2017,19.218,2.630000114
+Peru,PER,Latin America and Caribbean,2017,18.936,3.878999949
+Philippines,PHL,East Asia and Pacific,2017,22.975,3.696000099
 Palau,PLW,East Asia and Pacific,2017,12.4,-1
-Papua New Guinea,PNG,East Asia and Pacific,2017,27.298,65.705
-Poland,POL,Europe and Central Asia,2017,10.6,77.85121951
-Puerto Rico,PRI,Latin America and Caribbean,2017,7.3,79.97363415
-"Korea, Dem. People’s Rep.",PRK,East Asia and Pacific,2017,13.797,71.887
-Portugal,PRT,Europe and Central Asia,2017,8.4,81.12439024
-Paraguay,PRY,Latin America and Caribbean,2017,20.746,73.211
-West Bank and Gaza,PSE,Middle East and North Africa,2017,31.409,73.646
-French Polynesia,PYF,East Asia and Pacific,2017,15.177,76.996
-Qatar,QAT,Middle East and North Africa,2017,9.988,78.331
-Romania,ROU,Europe and Central Asia,2017,9.7,75.3097561
-Russian Federation,RUS,Europe and Central Asia,2017,12.9,72.11902439
-Rwanda,RWA,Sub-Saharan Africa,2017,30.441,67.496
-Saudi Arabia,SAU,Middle East and North Africa,2017,19.185,74.72
-Sudan,SDN,Sub-Saharan Africa,2017,32.555,64.698
-Senegal,SEN,Sub-Saharan Africa,2017,34.973,67.477
-Singapore,SGP,East Asia and Pacific,2017,8.9,82.89512195
-Solomon Islands,SLB,East Asia and Pacific,2017,28.198,71.006
-Sierra Leone,SLE,Sub-Saharan Africa,2017,34.44,52.214
-El Salvador,SLV,Latin America and Caribbean,2017,18.374,73.75
+Papua New Guinea,PNG,East Asia and Pacific,2017,27.298,1.715000033
+Poland,POL,Europe and Central Asia,2017,10.6,4.039000034
+Puerto Rico,PRI,Latin America and Caribbean,2017,7.3,3.979000092
+"Korea, Dem. People’s Rep.",PRK,East Asia and Pacific,2017,13.797,1.100000024
+Portugal,PRT,Europe and Central Asia,2017,8.4,4.745999813
+Paraguay,PRY,Latin America and Caribbean,2017,20.746,5.342999935
+West Bank and Gaza,PSE,Middle East and North Africa,2017,31.409,6.511000156
+French Polynesia,PYF,East Asia and Pacific,2017,15.177,3.770999908
+Qatar,QAT,Middle East and North Africa,2017,9.988,0.27700001
+Romania,ROU,Europe and Central Asia,2017,9.7,1.047000051
+Russian Federation,RUS,Europe and Central Asia,2017,12.9,1.345000029
+Rwanda,RWA,Sub-Saharan Africa,2017,30.441,0.059999999
+Saudi Arabia,SAU,Middle East and North Africa,2017,19.185,1.863999963
+Sudan,SDN,Sub-Saharan Africa,2017,32.555,5.949999809
+Senegal,SEN,Sub-Saharan Africa,2017,34.973,0.850000024
+Singapore,SGP,East Asia and Pacific,2017,8.9,4.849999905
+Solomon Islands,SLB,East Asia and Pacific,2017,28.198,1.269999981
+Sierra Leone,SLE,Sub-Saharan Africa,2017,34.44,2.678999901
+El Salvador,SLV,Latin America and Caribbean,2017,18.374,3.897000074
 San Marino,SMR,Europe and Central Asia,2017,-1,-1
-Somalia,SOM,Sub-Saharan Africa,2017,43.055,56.714
-Serbia,SRB,Europe and Central Asia,2017,9.2,76.08780488
-South Sudan,SSD,Sub-Saharan Africa,2017,35.56,57.288
-Sao Tome and Principe,STP,Sub-Saharan Africa,2017,33.361,66.762
-Suriname,SUR,Latin America and Caribbean,2017,17.983,71.523
-Slovak Republic,SVK,Europe and Central Asia,2017,10.7,77.16585366
-Slovenia,SVN,Europe and Central Asia,2017,9.8,81.17560976
-Sweden,SWE,Europe and Central Asia,2017,11.5,82.30731707
-Eswatini,SWZ,Sub-Saharan Africa,2017,28.415,58.268
+Somalia,SOM,Sub-Saharan Africa,2017,43.055,1.731999993
+Serbia,SRB,Europe and Central Asia,2017,9.2,3.315000057
+South Sudan,SSD,Sub-Saharan Africa,2017,35.56,2.821000099
+Sao Tome and Principe,STP,Sub-Saharan Africa,2017,33.361,1.628000021
+Suriname,SUR,Latin America and Caribbean,2017,17.983,1.929999948
+Slovak Republic,SVK,Europe and Central Asia,2017,10.7,3.203000069
+Slovenia,SVN,Europe and Central Asia,2017,9.8,3.822999954
+Sweden,SWE,Europe and Central Asia,2017,11.5,3.604000092
+Eswatini,SWZ,Sub-Saharan Africa,2017,28.415,2.194999933
 Sint Maarten (Dutch part),SXM,Latin America and Caribbean,2017,-1,-1
-Seychelles,SYC,Sub-Saharan Africa,2017,17.2,74.3
-Syrian Arab Republic,SYR,Middle East and North Africa,2017,20.906,70.963
+Seychelles,SYC,Sub-Saharan Africa,2017,17.2,-1
+Syrian Arab Republic,SYR,Middle East and North Africa,2017,20.906,4.605000019
 Turks and Caicos Islands,TCA,Latin America and Caribbean,2017,-1,-1
-Chad,TCD,Sub-Saharan Africa,2017,42.803,53.208
-Togo,TGO,Sub-Saharan Africa,2017,33.545,60.477
-Thailand,THA,East Asia and Pacific,2017,10.098,75.498
-Tajikistan,TJK,Europe and Central Asia,2017,28.275,71.214
-Turkmenistan,TKM,Europe and Central Asia,2017,24.614,67.956
-Timor-Leste,TLS,East Asia and Pacific,2017,34.642,69.199
-Tonga,TON,East Asia and Pacific,2017,23.625,73.179
-Trinidad and Tobago,TTO,Latin America and Caribbean,2017,13.253,70.783
-Tunisia,TUN,Middle East and North Africa,2017,17.865,75.943
-Turkey,TUR,Europe and Central Asia,2017,15.954,76.009
+Chad,TCD,Sub-Saharan Africa,2017,42.803,0.236000001
+Togo,TGO,Sub-Saharan Africa,2017,33.545,1.534000039
+Thailand,THA,East Asia and Pacific,2017,10.098,2.844000101
+Tajikistan,TJK,Europe and Central Asia,2017,28.275,0.421000004
+Turkmenistan,TKM,Europe and Central Asia,2017,24.614,1.888000011
+Timor-Leste,TLS,East Asia and Pacific,2017,34.642,1.636999965
+Tonga,TON,East Asia and Pacific,2017,23.625,1.123999953
+Trinidad and Tobago,TTO,Latin America and Caribbean,2017,13.253,5.357999802
+Tunisia,TUN,Middle East and North Africa,2017,17.865,7.118000031
+Turkey,TUR,Europe and Central Asia,2017,15.954,4.539999962
 Tuvalu,TUV,East Asia and Pacific,2017,-1,-1
-Tanzania,TZA,Sub-Saharan Africa,2017,37.752,66.31
-Uganda,UGA,Sub-Saharan Africa,2017,41.663,60.182
-Ukraine,UKR,Europe and Central Asia,2017,9.4,71.78097561
-Uruguay,URY,Latin America and Caribbean,2017,13.928,77.645
-United States,USA,North America,2017,11.8,78.53902439
-Uzbekistan,UZB,Europe and Central Asia,2017,22.1,71.42
-St. Vincent and the Grenadines,VCT,Latin America and Caribbean,2017,15.246,73.294
-"Venezuela, RB",VEN,Latin America and Caribbean,2017,18.735,74.726
+Tanzania,TZA,Sub-Saharan Africa,2017,37.752,2.714999914
+Uganda,UGA,Sub-Saharan Africa,2017,41.663,3.220999956
+Ukraine,UKR,Europe and Central Asia,2017,9.4,0.875
+Uruguay,URY,Latin America and Caribbean,2017,13.928,4.061999798
+United States,USA,North America,2017,11.8,2.5
+Uzbekistan,UZB,Europe and Central Asia,2017,22.1,1.631000042
+St. Vincent and the Grenadines,VCT,Latin America and Caribbean,2017,15.246,5.916999817
+"Venezuela, RB",VEN,Latin America and Caribbean,2017,18.735,3.49000001
 British Virgin Islands,VGB,Latin America and Caribbean,2017,-1,-1
-Virgin Islands (U.S.),VIR,Latin America and Caribbean,2017,12.8,79.4195122
-Vietnam,VNM,East Asia and Pacific,2017,16.45,76.454
-Vanuatu,VUT,East Asia and Pacific,2017,25.524,72.334
-Samoa,WSM,East Asia and Pacific,2017,24.316,75.24
-Kosovo,XKX,Europe and Central Asia,2017,16.4,71.94634146
-"Yemen, Rep.",YEM,Middle East and North Africa,2017,31.027,65.157
-South Africa,ZAF,Sub-Saharan Africa,2017,20.655,63.404
-Zambia,ZMB,Sub-Saharan Africa,2017,37.833,62.255
-Zimbabwe,ZWE,Sub-Saharan Africa,2017,32.318,61.712
+Virgin Islands (U.S.),VIR,Latin America and Caribbean,2017,12.8,5.500999928
+Vietnam,VNM,East Asia and Pacific,2017,16.45,2.03399992
+Vanuatu,VUT,East Asia and Pacific,2017,25.524,1.491000056
+Samoa,WSM,East Asia and Pacific,2017,24.316,4.926000118
+Kosovo,XKX,Europe and Central Asia,2017,16.4,-1
+"Yemen, Rep.",YEM,Middle East and North Africa,2017,31.027,7.164000034
+South Africa,ZAF,Sub-Saharan Africa,2017,20.655,5.426000118
+Zambia,ZMB,Sub-Saharan Africa,2017,37.833,0.296999991
+Zimbabwe,ZWE,Sub-Saharan Africa,2017,32.318,0.476000011
