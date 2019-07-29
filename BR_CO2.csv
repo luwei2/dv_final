@@ -1,0 +1,218 @@
+Country_Name,Country_Code,Region,Year,Fertility_Rate,Happiness_Score
+Aruba,ABW,Latin America and Caribbean,2014,10.975,8.410064178
+Afghanistan,AFG,South Asia,2014,34.836,0.293946407
+Angola,AGO,Sub-Saharan Africa,2014,42.864,1.290306776
+Albania,ALB,Europe and Central Asia,2014,11.914,1.978763312
+Andorra,AND,Europe and Central Asia,2014,-1,5.832906215
+United Arab Emirates,ARE,Middle East and North Africa,2014,10.202,22.93960631
+Argentina,ARG,Latin America and Caribbean,2014,17.547,4.781507775
+Armenia,ARM,Europe and Central Asia,2014,14.141,1.898719374
+American Samoa,ASM,East Asia and Pacific,2014,17.5,-1
+Antigua and Barbuda,ATG,Latin America and Caribbean,2014,16.519,5.744419956
+Australia,AUS,East Asia and Pacific,2014,13.2,15.38876602
+Austria,AUT,Europe and Central Asia,2014,9.6,6.86986793
+Azerbaijan,AZE,Europe and Central Asia,2014,17.9,3.931560609
+Burundi,BDI,Sub-Saharan Africa,2014,43.005,0.044699992
+Belgium,BEL,Europe and Central Asia,2014,11.2,8.328159898
+Benin,BEN,Sub-Saharan Africa,2014,37.83,0.61420609
+Burkina Faso,BFA,Sub-Saharan Africa,2014,39.977,0.162018438
+Bangladesh,BGD,South Asia,2014,19.637,0.47365761
+Bulgaria,BGR,Europe and Central Asia,2014,9.4,5.871615869
+Bahrain,BHR,Middle East and North Africa,2014,15.433,23.45540632
+"Bahamas, The",BHS,Latin America and Caribbean,2014,14.581,6.520069719
+Bosnia and Herzegovina,BIH,Europe and Central Asia,2014,9.098,6.384938819
+Belarus,BLR,Europe and Central Asia,2014,12.5,6.701957705
+Belize,BLZ,Latin America and Caribbean,2014,22.921,1.400941234
+Bermuda,BMU,North America,2014,10.5,8.838314988
+Bolivia,BOL,Latin America and Caribbean,2014,23.87,1.90636432
+Brazil,BRA,Latin America and Caribbean,2014,14.635,2.612933521
+Barbados,BRB,Latin America and Caribbean,2014,12.088,4.467476521
+Brunei Darussalam,BRN,East Asia and Pacific,2014,16.342,22.2291779
+Bhutan,BTN,South Asia,2014,18.782,1.392229534
+Botswana,BWA,Sub-Saharan Africa,2014,24.541,3.367451334
+Central African Republic,CAF,Sub-Saharan Africa,2014,36.542,0.067357126
+Canada,CAN,North America,2014,10.8,15.15892722
+Switzerland,CHE,Europe and Central Asia,2014,10.4,4.311562994
+Channel Islands,CHI,Europe and Central Asia,2014,9.448,-1
+Chile,CHL,Latin America and Caribbean,2014,13.608,4.6490622
+China,CHN,East Asia and Pacific,2014,12.37,7.543907641
+Cote d'Ivoire,CIV,Sub-Saharan Africa,2014,37.348,0.487688034
+Cameroon,CMR,Sub-Saharan Africa,2014,37.374,0.308791722
+"Congo, Dem. Rep.",COD,Sub-Saharan Africa,2014,43.31,0.063330889
+"Congo, Rep.",COG,Sub-Saharan Africa,2014,35.856,0.653359719
+Colombia,COL,Latin America and Caribbean,2014,15.77,1.790356827
+Comoros,COM,Sub-Saharan Africa,2014,33.786,0.202812784
+Cabo Verde,CPV,Sub-Saharan Africa,2014,21.407,0.948113817
+Costa Rica,CRI,Latin America and Caribbean,2014,14.768,1.618087849
+Cuba,CUB,Latin America and Caribbean,2014,11.04,3.080994246
+Curacao,CUW,Latin America and Caribbean,2014,12.6,37.72628905
+Cayman Islands,CYM,Latin America and Caribbean,2014,12.47521625,8.91920852
+Cyprus,CYP,Europe and Central Asia,2014,11.118,5.260461605
+Czech Republic,CZE,Europe and Central Asia,2014,10.4,9.165978376
+Germany,DEU,Europe and Central Asia,2014,8.8,8.889370395
+Djibouti,DJI,Middle East and North Africa,2014,23.699,0.803830216
+Dominica,DMA,Latin America and Caribbean,2014,12,1.908686783
+Denmark,DNK,Europe and Central Asia,2014,10.1,5.935712482
+Dominican Republic,DOM,Latin America and Caribbean,2014,20.857,2.11899467
+Algeria,DZA,Middle East and North Africa,2014,24.522,3.735520147
+Ecuador,ECU,Latin America and Caribbean,2014,20.774,2.753266363
+"Egypt, Arab Rep.",EGY,Middle East and North Africa,2014,27.707,2.232732005
+Eritrea,ERI,Sub-Saharan Africa,2014,33.469,-1
+Spain,ESP,Europe and Central Asia,2014,9.2,5.033824487
+Estonia,EST,Europe and Central Asia,2014,10.3,14.84881917
+Ethiopia,ETH,Sub-Saharan Africa,2014,32.806,0.118240576
+Finland,FIN,Europe and Central Asia,2014,10.5,8.660721243
+Fiji,FJI,East Asia and Pacific,2014,20.109,1.350070921
+France,FRA,Europe and Central Asia,2014,12.4,4.573181595
+Faroe Islands,FRO,Europe and Central Asia,2014,13.2,12.46290659
+"Micronesia, Fed. Sts.",FSM,East Asia and Pacific,2014,23.579,1.399279638
+Gabon,GAB,Sub-Saharan Africa,2014,30.605,2.756381782
+United Kingdom,GBR,Europe and Central Asia,2014,12,6.49744049
+Georgia,GEO,Europe and Central Asia,2014,14.043,2.416460496
+Ghana,GHA,Sub-Saharan Africa,2014,32.029,0.531371738
+Gibraltar,GIB,Europe and Central Asia,2014,-1,15.65746479
+Guinea,GIN,Sub-Saharan Africa,2014,36.805,0.219671873
+"Gambia, The",GMB,Sub-Saharan Africa,2014,40.471,0.253640982
+Guinea-Bissau,GNB,Sub-Saharan Africa,2014,37.675,0.160335469
+Equatorial Guinea,GNQ,Sub-Saharan Africa,2014,35.179,4.763967152
+Greece,GRC,Europe and Central Asia,2014,8.5,6.180337268
+Grenada,GRD,Latin America and Caribbean,2014,19.16,2.222383427
+Greenland,GRL,Europe and Central Asia,2014,14.3,8.989181988
+Guatemala,GTM,Latin America and Caribbean,2014,25.998,1.151000836
+Guam,GUM,East Asia and Pacific,2014,17.021,-1
+Guyana,GUY,Latin America and Caribbean,2014,20.847,2.632392779
+"Hong Kong SAR, China",HKG,East Asia and Pacific,2014,8.6,6.393600526
+Honduras,HND,Latin America and Caribbean,2014,22.416,1.057648023
+Croatia,HRV,Europe and Central Asia,2014,9.3,3.973804906
+Haiti,HTI,Latin America and Caribbean,2014,24.93,0.271140187
+Hungary,HUN,Europe and Central Asia,2014,9.5,4.265574976
+Indonesia,IDN,East Asia and Pacific,2014,19.705,1.81937838
+Isle of Man,IMN,Europe and Central Asia,2014,-1,-1
+India,IND,South Asia,2014,19.573,1.727670507
+Ireland,IRL,Europe and Central Asia,2014,14.4,7.313939808
+"Iran, Islamic Rep.",IRN,Middle East and North Africa,2014,17.568,8.384101101
+Iraq,IRQ,Middle East and North Africa,2014,34.009,4.89491703
+Iceland,ISL,Europe and Central Asia,2014,13.4,6.059657407
+Israel,ISR,Middle East and North Africa,2014,21.5,7.863181348
+Italy,ITA,Europe and Central Asia,2014,8.3,5.270866786
+Jamaica,JAM,Latin America and Caribbean,2014,16.983,2.581445886
+Jordan,JOR,Middle East and North Africa,2014,27.576,2.965238308
+Japan,JPN,East Asia and Pacific,2014,8,9.538706103
+Kazakhstan,KAZ,Europe and Central Asia,2014,23.1,14.36316974
+Kenya,KEN,Sub-Saharan Africa,2014,32.32,0.305923722
+Kyrgyz Republic,KGZ,Europe and Central Asia,2014,27.7,1.646395339
+Cambodia,KHM,East Asia and Pacific,2014,24.056,0.437653585
+Kiribati,KIR,East Asia and Pacific,2014,28.827,0.569873207
+St. Kitts and Nevis,KNA,Latin America and Caribbean,2014,11.9,4.549986213
+"Korea, Rep.",KOR,East Asia and Pacific,2014,8.6,11.57034541
+Kuwait,KWT,Middle East and North Africa,2014,17.362,25.84922928
+Lao PDR,LAO,East Asia and Pacific,2014,24.788,0.294364883
+Lebanon,LBN,Middle East and North Africa,2014,15.177,3.843598231
+Liberia,LBR,Sub-Saharan Africa,2014,35.152,0.214493389
+Libya,LBY,Middle East and North Africa,2014,20.631,8.95879433
+St. Lucia,LCA,Latin America and Caribbean,2014,12.37,2.282928389
+Liechtenstein,LIE,Europe and Central Asia,2014,10,1.182172313
+Sri Lanka,LKA,South Asia,2014,15.937,0.885247473
+Lesotho,LSO,Sub-Saharan Africa,2014,28.368,1.207715726
+Lithuania,LTU,Europe and Central Asia,2014,10.4,4.378090123
+Luxembourg,LUX,Europe and Central Asia,2014,10.9,17.36212137
+Latvia,LVA,Europe and Central Asia,2014,10.9,3.498192882
+"Macao SAR, China",MAC,East Asia and Pacific,2014,11.734,2.174572354
+St. Martin (French part),MAF,Latin America and Caribbean,2014,15.7,-1
+Morocco,MAR,Middle East and North Africa,2014,20.759,1.750794556
+Monaco,MCO,Europe and Central Asia,2014,-1,-1
+Moldova,MDA,Europe and Central Asia,2014,10.701,1.386829142
+Madagascar,MDG,Sub-Saharan Africa,2014,33.679,0.130420845
+Maldives,MDV,South Asia,2014,19.236,3.068372355
+Mexico,MEX,Latin America and Caribbean,2014,18.837,3.990446149
+Marshall Islands,MHL,East Asia and Pacific,2014,-1,1.795694223
+North Macedonia,MKD,Europe and Central Asia,2014,11.288,3.614451035
+Mali,MLI,Sub-Saharan Africa,2014,43.834,0.083369355
+Malta,MLT,Middle East and North Africa,2014,9.6,5.400613957
+Myanmar,MMR,East Asia and Pacific,2014,18.259,0.41375859
+Montenegro,MNE,Europe and Central Asia,2014,11.691,3.55607179
+Mongolia,MNG,East Asia and Pacific,2014,25.261,7.088025678
+Northern Mariana Islands,MNP,East Asia and Pacific,2014,-1,-1
+Mozambique,MOZ,Sub-Saharan Africa,2014,39.778,0.320578017
+Mauritania,MRT,Sub-Saharan Africa,2014,34.969,0.689388119
+Mauritius,MUS,Sub-Saharan Africa,2014,10.6,3.353110472
+Malawi,MWI,Sub-Saharan Africa,2014,37.495,0.078339597
+Malaysia,MYS,East Asia and Pacific,2014,17.115,8.130210313
+Namibia,NAM,Sub-Saharan Africa,2014,29.897,1.651692817
+New Caledonia,NCL,East Asia and Pacific,2014,16.3,16.00593173
+Niger,NER,Sub-Saharan Africa,2014,48.745,0.110542757
+Nigeria,NGA,Sub-Saharan Africa,2014,39.838,0.545794085
+Nicaragua,NIC,Latin America and Caribbean,2014,20.35,0.791576323
+Netherlands,NLD,Europe and Central Asia,2014,10.4,9.920138075
+Norway,NOR,Europe and Central Asia,2014,11.5,9.270945132
+Nepal,NPL,South Asia,2014,20.318,0.298463303
+Nauru,NRU,East Asia and Pacific,2014,-1,4.021851008
+New Zealand,NZL,East Asia and Pacific,2014,12.68,7.686575825
+Oman,OMN,Middle East and North Africa,2014,20.365,15.18879511
+Pakistan,PAK,South Asia,2014,29.163,0.851472804
+Panama,PAN,Latin America and Caribbean,2014,20.146,2.255854757
+Peru,PER,Latin America and Caribbean,2014,19.924,2.051984358
+Philippines,PHL,East Asia and Pacific,2014,23.688,1.05114223
+Palau,PLW,East Asia and Pacific,2014,13.7,14.77119029
+Papua New Guinea,PNG,East Asia and Pacific,2014,28.286,0.795074226
+Poland,POL,Europe and Central Asia,2014,9.9,7.517151585
+Puerto Rico,PRI,Latin America and Caribbean,2014,9.7,-1
+"Korea, Dem. People’s Rep.",PRK,East Asia and Pacific,2014,13.919,1.617371103
+Portugal,PRT,Europe and Central Asia,2014,7.9,4.331554028
+Paraguay,PRY,Latin America and Caribbean,2014,21.354,0.864029477
+West Bank and Gaza,PSE,Middle East and North Africa,2014,32.44,-1
+French Polynesia,PYF,East Asia and Pacific,2014,15.781,2.955679873
+Qatar,QAT,Middle East and North Africa,2014,10.483,43.85730795
+Romania,ROU,Europe and Central Asia,2014,10,3.516153691
+Russian Federation,RUS,Europe and Central Asia,2014,13.3,11.85752777
+Rwanda,RWA,Sub-Saharan Africa,2014,32.485,0.075764224
+Saudi Arabia,SAU,Middle East and North Africa,2014,20.284,19.44066648
+Sudan,SDN,Sub-Saharan Africa,2014,33.723,0.299732598
+Senegal,SEN,Sub-Saharan Africa,2014,36.772,0.624760004
+Singapore,SGP,East Asia and Pacific,2014,9.8,10.30633191
+Solomon Islands,SLB,East Asia and Pacific,2014,29.871,0.343539796
+Sierra Leone,SLE,Sub-Saharan Africa,2014,36.277,0.186560088
+El Salvador,SLV,Latin America and Caribbean,2014,18.839,0.998428944
+San Marino,SMR,Europe and Central Asia,2014,9.1,-1
+Somalia,SOM,Sub-Saharan Africa,2014,43.961,0.045347231
+Serbia,SRB,Europe and Central Asia,2014,9.3,5.282521917
+South Sudan,SSD,Sub-Saharan Africa,2014,36.7,0.141748232
+Sao Tome and Principe,STP,Sub-Saharan Africa,2014,34.823,0.580793656
+Suriname,SUR,Latin America and Caribbean,2014,18.678,3.598912291
+Slovak Republic,SVK,Europe and Central Asia,2014,10.2,5.661581328
+Slovenia,SVN,Europe and Central Asia,2014,10.3,6.213686845
+Sweden,SWE,Europe and Central Asia,2014,11.9,4.478182178
+Eswatini,SWZ,Sub-Saharan Africa,2014,29.685,1.098404505
+Sint Maarten (Dutch part),SXM,Latin America and Caribbean,2014,14.1,19.46132413
+Seychelles,SYC,Sub-Saharan Africa,2014,17,5.418677963
+Syrian Arab Republic,SYR,Middle East and North Africa,2014,22.93,1.640539063
+Turks and Caicos Islands,TCA,Latin America and Caribbean,2014,-1,5.805988295
+Chad,TCD,Sub-Saharan Africa,2014,44.407,0.053407242
+Togo,TGO,Sub-Saharan Africa,2014,35.057,0.36731663
+Thailand,THA,East Asia and Pacific,2014,10.837,4.620377146
+Tajikistan,TJK,Europe and Central Asia,2014,29.727,0.628730158
+Turkmenistan,TKM,Europe and Central Asia,2014,26.423,12.51709612
+Timor-Leste,TLS,East Asia and Pacific,2014,36.012,0.399696508
+Tonga,TON,East Asia and Pacific,2014,24.895,1.19779665
+Trinidad and Tobago,TTO,Latin America and Caribbean,2014,14.283,33.96641445
+Tunisia,TUN,Middle East and North Africa,2014,18.868,2.605932406
+Turkey,TUR,Europe and Central Asia,2014,16.826,4.479773496
+Tuvalu,TUV,East Asia and Pacific,2014,-1,1.002643092
+Tanzania,TZA,Sub-Saharan Africa,2014,39.12,0.231426985
+Uganda,UGA,Sub-Saharan Africa,2014,43.129,0.141664527
+Ukraine,UKR,Europe and Central Asia,2014,10.8,5.020747064
+Uruguay,URY,Latin America and Caribbean,2014,14.255,1.984240835
+United States,USA,North America,2014,12.5,16.50283724
+Uzbekistan,UZB,Europe and Central Asia,2014,23.3,3.420722746
+St. Vincent and the Grenadines,VCT,Latin America and Caribbean,2014,16.036,1.920054014
+"Venezuela, RB",VEN,Latin America and Caribbean,2014,19.62,6.164731034
+British Virgin Islands,VGB,Latin America and Caribbean,2014,-1,6.198316603
+Virgin Islands (U.S.),VIR,Latin America and Caribbean,2014,13.2,-1
+Vietnam,VNM,East Asia and Pacific,2014,17.129,1.819893977
+Vanuatu,VUT,East Asia and Pacific,2014,26.469,0.583633966
+Samoa,WSM,East Asia and Pacific,2014,25.61,1.030157995
+Kosovo,XKX,Europe and Central Asia,2014,17.4,-1
+"Yemen, Rep.",YEM,Middle East and North Africa,2014,32.775,0.878995612
+South Africa,ZAF,Sub-Saharan Africa,2014,21.594,8.979062348
+Zambia,ZMB,Sub-Saharan Africa,2014,38.771,0.292412222
+Zimbabwe,ZWE,Sub-Saharan Africa,2014,34.647,0.884721294
