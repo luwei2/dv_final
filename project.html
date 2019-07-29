@@ -57,6 +57,19 @@
 					<p class="bodyText">Filter by clicking on any element in the legend. Use the brushing bar at the bottom by holding any of the two extremes and moving the context bar from left to right and viceversa. Use each point&#39;s tooltip to get detailed information, just hover over the points in the graph.</p>
 				</div>	
 			</div>
+			<div class="section" style="width:100%; height:100%; padding-left:3%; padding-right:1%;">
+				<div style="float: right; width: 70%; text-align: center;">
+					<div style="padding-right: 140px; font-size: 20px; font-weight: bold;">Fertility Rate and Hapiness Score in 2015<br/></div>
+					<svg id="FertilityRateVsHapiness2" width="800" height="500"></svg>
+				</div>
+				<div style="float: left; width: 30%;">
+					<p style="font-size: 60px; font-weight: bold; color:#1a1a1a;">Happiness<br/></p>
+					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Are you happy?</p>
+					<p class="bodyText">Alright, enough GDP per capita. Let&#39;s now compare Fertility Rate with Happiness Score in 2015. At some point of low values of Fertility Rate people have different levels of happiness, nevertheless, those are far higher than the ones with high levels of Fertility Rate. Are you happy? How many children do you have? Tinker with the graph and tell me.</p>
+					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">What can you do?</p>
+					<p class="bodyText">Filter by clicking on any element in the legend. Use the brushing bar at the bottom by holding any of the two extremes and moving the context bar from left to right and viceversa. Use each point&#39;s tooltip to get detailed information, just hover over the points in the graph.</p>
+				</div>	
+			</div>
 			<div class="section" style="width:100%; height:100%; padding-left:3%; padding-right:7%;">
 				<div style="float: right; width: 50%;">
 					<div style="padding-left:6%;">
@@ -100,7 +113,6 @@
 				</div>			
 			</div>
 		</div>
-		<a id="footer" href="#About">About this visualization</a>
 		<script>
 			
 			// ***************************************************
@@ -112,8 +124,8 @@
 					sectionsColor: ['#ffffff', '#f2f2f2', '#ffffff', '#f2f2f2', '#ffffff'],
 					navigation: true,
 					navigationPosition: 'right',
-					navigationTooltips: ['Intro', 'GDP', 'Happiness', 'About', 'Resources'],
-					anchors:['Intro', 'GDP', 'Happiness', 'About', 'Author']
+					navigationTooltips: ['Income', 'Death_Rate', 'Happiness', 'About', 'Resources'],
+					anchors:['Income', 'Death_Rate', 'Happiness', 'About', 'Resources']
 				});
 			});
 
@@ -128,6 +140,266 @@
 			// Line color
 			var color = d3.scaleOrdinal(d3.schemeCategory10);
 
+
+			// ***************************************************
+			// ********** FERTILITY RATE VS HAPPINESS ************
+			// ***************************************************
+
+			// ******** Variable definition *********	
+
+			// Div for tooltips
+			var div_1 = d3.select("body").append("div")
+				.attr("class", "tooltip")
+				.style("opacity", 0);
+
+			// SVG to be modified selection
+			var vis_1 = d3.select("#FertilityRateVsHapiness");
+
+			// Dimensions
+			var	MARGINS_1 = { top: 20, right: 210, bottom: 130, left: 50 },
+				MARGINS2_1 = { top: 410, right: 210, bottom: 50, left: 50 },
+				WIDTH_1 = +vis_1.attr("width") - MARGINS_1.left - MARGINS_1.right,
+				HEIGHT_1 = +vis_1.attr("height") - MARGINS_1.top - MARGINS_1.bottom,
+				HEIGHT2_1 = +vis_1.attr("height") - MARGINS2_1.top - MARGINS2_1.bottom;
+
+			// Scales
+			var xScale_1 = d3.scaleLinear().range([0, WIDTH_1]),
+				xScale2_1 = d3.scaleLinear().range([0, WIDTH_1]),
+				yScale_1 = d3.scaleLinear().range([HEIGHT_1, 0]),
+				yScale2_1 = d3.scaleLinear().range([HEIGHT2_1, 0]);
+
+			// Grid Lines X-axis function
+			function make_x_gridlines_1() {		
+			    return d3.axisBottom(xScale_1)
+			        .ticks(10)
+			}
+
+			// Grid Lines Y-axis function
+			function make_y_gridlines_1() {		
+			    return d3.axisLeft(yScale_1)
+			        .ticks(10)
+			}
+
+			// Axis
+			var	xAxis_1 = d3.axisBottom(xScale_1),
+				xAxis2_1 = d3.axisBottom(xScale2_1),
+				yAxis_1 = d3.axisLeft(yScale_1);
+
+			// Define brush call
+			var brush_1 = d3.brushX()
+			    .extent([[0, 0], [WIDTH_1, HEIGHT2_1]])
+			    .on("brush end", brushed_1);
+
+			// Append class context that will be used to draw the charts in the context bar
+			var context_1 = vis_1.append("g")
+			    .attr("class", "context_1")
+			    .attr("transform", "translate(" + MARGINS2_1.left + "," + MARGINS2_1.top + ")");
+
+			// Append class points that will be used to draw the points in the graph
+			var points_1 = vis_1.append("g")
+			    .attr("class", "points_1")
+			    .attr("transform", "translate(" + MARGINS_1.left + "," + MARGINS_1.top + ")");
+
+			// clipPath definition
+			vis_1.append("defs").append("clipPath")
+				.attr("id", "clip_1")
+				.append("rect")
+				.attr("width", WIDTH_1)
+				.attr("height", HEIGHT_1);
+
+			// ******** Scatter plot graph creation *********
+
+			// Source of information
+			d3.csv("https://raw.githubusercontent.com/luwei2/dv_final/master/BR_DR.csv", function(data) {	
+				
+				// Fertility rate and happiness score to number
+				data.forEach(function(d) {
+					d.Fertility_Rate = +d.Fertility_Rate;
+					d.Happiness_Score = +d.Happiness_Score;
+				});
+
+				// Nest data based on Region
+				var dataRegion_1 = d3.nest()
+				    .key(function(d) { return d.Region; })
+				    .entries(data);
+
+				// Set domain for ranges dynamically based on data
+				xScale_1.domain([d3.min(data, function(d) { return d.Happiness_Score; }) - 0.1, d3.max(data, function(d) { return d.Happiness_Score; }) + 0.1])
+				yScale_1.domain([0, d3.max(data, function(d) { return d.Fertility_Rate; }) + 1]);
+				xScale2_1.domain(xScale_1.domain());
+				yScale2_1.domain(yScale_1.domain());
+
+				// Add the grid lines to X-Axis
+				points_1.append("g")			
+					.attr("class", "grid")
+					.attr("transform", "translate(0," + HEIGHT_1 + ")")
+					.call(make_x_gridlines_1()
+						.tickSize(-HEIGHT_1)
+						.tickFormat("")
+					)
+
+				// Add the grid lines to Y-Axis
+				points_1.append("g")			
+				.attr("class", "grid")
+				.call(make_y_gridlines_1()
+					.tickSize(-WIDTH_1)
+					.tickFormat("")
+				) 
+
+				// Add the dots with tooltips
+				points_1.selectAll("dot")
+					.data(data)
+					.enter().append("circle")
+					.attr("r", 4)
+					.attr("cx", function(v) { return xScale_1(v.Happiness_Score); })
+					.attr("cy", function(v) { return yScale_1(v.Fertility_Rate); })
+					.attr("class", "line_1")
+					.attr('id', function(v) { return 'point_1_'+v.Region.replace(/\s+/g, ''); } )
+					.attr('clip-path', 'url(#clip_1)')
+					.on("mouseover", function(v) {
+						div_1.transition()
+							.duration(200)
+							.style("opacity", .9);
+						div_1.html("<b style='font-size:12px; color:#333333'>" + v.Country_Name + "</b><br/><b>Year: 2015</b><br/><b>Fertility Rate: </b>" + v.Fertility_Rate + "<br/><b>Happiness Score: </b>" + v.Happiness_Score)
+							.style("left", (d3.event.pageX) + "px")
+							.style("top", (d3.event.pageY - 28) + "px");
+					})
+					.on("mouseout", function(v) {
+						div_1.transition()
+						.duration(500)
+						.style("opacity", 0);
+					});
+
+				// Draw the scatter graph on context section
+				context_1.selectAll("dot")
+					.data(data)
+					.enter().append("circle")
+					.attr("r", 2.5)
+					.attr("cx", function(v) { return xScale2_1(v.Happiness_Score); })
+					.attr("cy", function(v) { return yScale2_1(v.Fertility_Rate); })
+					.attr("class", "line_1")
+					.attr('id', function(v) { return 'point_1_'+v.Region.replace(/\s+/g, '') } )
+					.attr('clip-path', 'url(#clip_1)');
+
+				// For each Region add a legend and color
+				dataRegion_1.forEach(function(d, i) {
+
+					// Create legend text for each region
+					vis_1.append("text")
+						.attr("class", "legend")
+						.attr("x", WIDTH_1 + MARGINS_1.left + 30)
+						.attr("y", HEIGHT_1/2 + i * 20)
+						.style("fill", "black")
+						.text(d.key)
+						.attr('id', 'legendText_1_'+d.values[0].Region.replace(/\s+/g, ''))
+						.on("mouseover", function(v) {
+							var shadow = "2px 2px 2px #808080";
+							d3.selectAll("#legendColor_1_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 1).style("stroke", "black");
+							d3.selectAll("#legendText_1_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
+						})
+						.on("mouseout", function(v) {
+							var shadow = "2px 2px 2px #aaa";
+							d3.selectAll("#legendColor_1_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 0).style("stroke", "none");
+							d3.selectAll("#legendText_1_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
+						})
+						.on('click', function() {
+							var active = d.active ? false : true;
+							var opacity = active ? 0 : 1;
+							var legendOpacity = active ? 0.3 : 1;
+							var shadow = active ? "none" : "2px 2px 2px #aaa";
+							var radius = active ? 0 : 4;
+							d3.selectAll("#line_1_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", opacity);
+							d3.selectAll("#point_1_"+d.values[0].Region.replace(/\s+/g, '')).attr("r", radius);
+							d3.selectAll("#legendColor_1_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity);
+							d3.selectAll("#legendText_1_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity).style("text-shadow", shadow);
+							d.active = active;
+						});
+
+					// Create colored rectangle for each region				
+					vis_1.append("rect")
+						.attr("x", WIDTH_1 + MARGINS_1.left + 15)
+						.attr("y", HEIGHT_1/2 + i * 20 - 10)
+						.attr('fill', color(i))
+						.attr("width", 10)
+						.attr("height", 10)
+						.attr('id', 'legendColor_1_'+d.values[0].Region.replace(/\s+/g, ''))
+						.on("mouseover", function(v) {
+							var shadow = "2px 2px 2px #808080";
+							d3.selectAll("#legendColor_1_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 1).style("stroke", "black");
+							d3.selectAll("#legendText_1_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
+						})
+						.on("mouseout", function(v) {
+							var shadow = "2px 2px 2px #aaa";
+							d3.selectAll("#legendColor_1_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 0).style("stroke", "none");
+							d3.selectAll("#legendText_1_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
+						})
+						.on('click', function() {
+							var active = d.active ? false : true;
+							var opacity = active ? 0 : 1;
+							var legendOpacity = active ? 0.3 : 1;
+							var radius = active ? 0 : 4;
+							d3.selectAll("#line_1_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", opacity);
+							d3.selectAll("#point_1_"+d.values[0].Region.replace(/\s+/g, '')).attr("r", radius);
+							d3.selectAll("#legendColor_1_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity);
+							d3.selectAll("#legendText_1_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity);
+							d.active = active;
+						});
+
+					// Set dots color by region
+					context_1.selectAll("#point_1_"+d.values[0].Region.replace(/\s+/g, '')).attr('fill', color(i));
+					points_1.selectAll("#point_1_"+d.values[0].Region.replace(/\s+/g, '')).attr('fill', color(i));
+				});
+
+				// Set X axis to scatter plot section
+				points_1.append("g")
+					.attr("class", "axis axis--x")
+					.attr("transform", "translate(0," + HEIGHT_1 + ")")
+					.call(xAxis_1);
+
+				// Set Y axis to scatter plot section
+				points_1.append("g")
+					.attr("class", "axis axis--y")
+					.call(yAxis_1);
+
+				// Set X axis to context section
+				context_1.append("g")
+					.attr("class", "axis axis--x")
+					.attr("transform", "translate(0," + HEIGHT2_1 + ")")
+					.call(xAxis2_1);
+
+				// Set brush call for context bar
+				context_1.append("g")
+					.attr("class", "brush_1")
+					.call(brush_1)
+					.call(brush_1.move, xScale_1.range());
+
+				// X Axis label
+				context_1.append("text")
+					.attr("transform", "translate(" + (WIDTH_1/2) + "," + (HEIGHT2_1 + 40) + ")")
+					.style("text-anchor", "middle")
+					.text("Happiness Score");
+
+				// Y Axis label
+				vis_1.append("text")
+					.attr("transform", "rotate(-90), translate(" + (-1 * HEIGHT_1 / 2 ) + ", 20)")
+					.style("text-anchor", "middle")
+					.text("Fertility Rate (births per woman)");     
+			});
+
+			// Refresh ranges and line graphs on scatter plot section for brushing action
+			function brushed_1() {
+				var s = d3.event.selection || xScale2_1.range();
+				xScale_1.domain(s.map(xScale2_1.invert, xScale2_1));
+				points_1.selectAll(".line_1")
+					.attr("cx", function(v) { return xScale_1(v.Happiness_Score); })
+					.attr("cy", function(v) { return yScale_1(v.Fertility_Rate); });
+				points_1.select(".axis--x").call(xAxis_1);
+				points_1.select(".grid").call(make_x_gridlines_1()
+						.tickSize(-HEIGHT_1)
+						.tickFormat("")
+					);
+			}
+
 			// ***************************************************
 			// ********** FERTILITY RATE VS HAPPINESS ************
 			// ***************************************************
@@ -140,7 +412,7 @@
 				.style("opacity", 0);
 
 			// SVG to be modified selection
-			var vis_2 = d3.select("#FertilityRateVsHapiness");
+			var vis_2 = d3.select("#FertilityRateVsHapiness2");
 
 			// Dimensions
 			var	MARGINS_2 = { top: 20, right: 210, bottom: 130, left: 50 },
@@ -197,7 +469,7 @@
 			// ******** Scatter plot graph creation *********
 
 			// Source of information
-			d3.csv("https://raw.githubusercontent.com/luwei2/dv_final/master/BR_DR.csv", function(data) {	
+			d3.csv("https://raw.githubusercontent.com/luwei2/dv_final/master/BR_LE.csv", function(data) {	
 				
 				// Fertility rate and happiness score to number
 				data.forEach(function(d) {
