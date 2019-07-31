@@ -474,7 +474,7 @@
 				// Birth rate and CO2 emission to number
 				data.forEach(function(d) {
 					d.Birth_Rate = +d.Birth_Rate;
-					d.Death_Rate = +d.Death_Rate;
+					d.CO2 = +d.CO2;
 				});
 
 				// Nest data based on Region
@@ -483,7 +483,7 @@
 				    .entries(data);
 
 				// Set domain for ranges dynamically based on data
-				xScale_2.domain([d3.min(data, function(d) { return d.Death_Rate; }) - 0.1, d3.max(data, function(d) { return d.Death_Rate; }) + 0.1])
+				xScale_2.domain([d3.min(data, function(d) { return d.CO2; }) - 0.1, d3.max(data, function(d) { return d.CO2; }) + 0.1])
 				yScale_2.domain([0, d3.max(data, function(d) { return d.Birth_Rate; }) + 1]);
 				xScale2_2.domain(xScale_2.domain());
 				yScale2_2.domain(yScale_2.domain());
@@ -510,7 +510,7 @@
 					.data(data)
 					.enter().append("circle")
 					.attr("r", 4)
-					.attr("cx", function(v) { return xScale_2(v.Death_Rate); })
+					.attr("cx", function(v) { return xScale_2(v.CO2); })
 					.attr("cy", function(v) { return yScale_2(v.Birth_Rate); })
 					.attr("class", "line_2")
 					.attr('id', function(v) { return 'point_2_'+v.Region.replace(/\s+/g, ''); } )
@@ -519,7 +519,7 @@
 						div_2.transition()
 							.duration(200)
 							.style("opacity", .9);
-						div_2.html("<b style='font-size:12px; color:#333333'>" + v.Country_Name + "</b><br/><b>Year: 2017</b><br/><b>Birth Rate: </b>" + v.Birth_Rate + "<br/><b>CO2 Emission: </b>" + v.Death_Rate)
+						div_2.html("<b style='font-size:12px; color:#333333'>" + v.Country_Name + "</b><br/><b>Year: 2017</b><br/><b>Birth Rate: </b>" + v.Birth_Rate + "<br/><b>CO2 Emission: </b>" + v.CO2)
 							.style("left", (d3.event.pageX) + "px")
 							.style("top", (d3.event.pageY - 28) + "px");
 					})
@@ -534,7 +534,7 @@
 					.data(data)
 					.enter().append("circle")
 					.attr("r", 2.5)
-					.attr("cx", function(v) { return xScale2_2(v.Death_Rate); })
+					.attr("cx", function(v) { return xScale2_2(v.CO2); })
 					.attr("cy", function(v) { return yScale2_2(v.Birth_Rate); })
 					.attr("class", "line_2")
 					.attr('id', function(v) { return 'point_2_'+v.Region.replace(/\s+/g, '') } )
@@ -650,7 +650,7 @@
 				var s = d3.event.selection || xScale2_2.range();
 				xScale_2.domain(s.map(xScale2_2.invert, xScale2_2));
 				points_2.selectAll(".line_2")
-					.attr("cx", function(v) { return xScale_2(v.Death_Rate); })
+					.attr("cx", function(v) { return xScale_2(v.CO2); })
 					.attr("cy", function(v) { return yScale_2(v.Birth_Rate); });
 				points_2.select(".axis--x").call(xAxis_2);
 				points_2.select(".grid").call(make_x_gridlines_2()
