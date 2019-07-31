@@ -1,4 +1,4 @@
-Country_Name,Country_Code,Region,Year,Fertility_Rate,Happiness_Score
+Country_Name,Country_Code,Region,Year,Birth_Rate,CO2
 Aruba,ABW,Latin America and Caribbean,2014,10.975,8.410064178
 Afghanistan,AFG,South Asia,2014,34.836,0.293946407
 Angola,AGO,Sub-Saharan Africa,2014,42.864,1.290306776
