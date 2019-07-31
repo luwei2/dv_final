@@ -377,7 +377,7 @@
 				context_1.append("text")
 					.attr("transform", "translate(" + (WIDTH_1/2) + "," + (HEIGHT2_1 + 40) + ")")
 					.style("text-anchor", "middle")
-					.text("Happiness Score");
+					.text("Death Rate");
 
 				// Y Axis label
 				vis_1.append("text")
@@ -400,9 +400,8 @@
 					);
 			}
 
-
 			// ***************************************************
-			// ********** FERTILITY RATE VS HAPPINESS ************
+			// ********** BIRTH RATE VS CO2 EMISSION ************
 			// ***************************************************
 
 			// ******** Variable definition *********	
@@ -472,10 +471,10 @@
 			// Source of information
 			d3.csv("https://raw.githubusercontent.com/luwei2/dv_final/master/BR_CO2.csv", function(data) {	
 				
-				// Fertility rate and happiness score to number
+				// Birth rate and CO2 emission to number
 				data.forEach(function(d) {
-					d.Fertility_Rate = +d.Fertility_Rate;
-					d.Happiness_Score = +d.Happiness_Score;
+					d.Birth_Rate = +d.Birth_Rate;
+					d.Death_Rate = +d.Death_Rate;
 				});
 
 				// Nest data based on Region
@@ -484,8 +483,8 @@
 				    .entries(data);
 
 				// Set domain for ranges dynamically based on data
-				xScale_2.domain([d3.min(data, function(d) { return d.Happiness_Score; }) - 0.1, d3.max(data, function(d) { return d.Happiness_Score; }) + 0.1])
-				yScale_2.domain([0, d3.max(data, function(d) { return d.Fertility_Rate; }) + 1]);
+				xScale_2.domain([d3.min(data, function(d) { return d.Death_Rate; }) - 0.1, d3.max(data, function(d) { return d.Death_Rate; }) + 0.1])
+				yScale_2.domain([0, d3.max(data, function(d) { return d.Birth_Rate; }) + 1]);
 				xScale2_2.domain(xScale_2.domain());
 				yScale2_2.domain(yScale_2.domain());
 
@@ -511,8 +510,8 @@
 					.data(data)
 					.enter().append("circle")
 					.attr("r", 4)
-					.attr("cx", function(v) { return xScale_2(v.Happiness_Score); })
-					.attr("cy", function(v) { return yScale_2(v.Fertility_Rate); })
+					.attr("cx", function(v) { return xScale_2(v.Death_Rate); })
+					.attr("cy", function(v) { return yScale_2(v.Birth_Rate); })
 					.attr("class", "line_2")
 					.attr('id', function(v) { return 'point_2_'+v.Region.replace(/\s+/g, ''); } )
 					.attr('clip-path', 'url(#clip_2)')
@@ -520,7 +519,7 @@
 						div_2.transition()
 							.duration(200)
 							.style("opacity", .9);
-						div_2.html("<b style='font-size:12px; color:#333333'>" + v.Country_Name + "</b><br/><b>Year: 2015</b><br/><b>Fertility Rate: </b>" + v.Fertility_Rate + "<br/><b>Happiness Score: </b>" + v.Happiness_Score)
+						div_2.html("<b style='font-size:12px; color:#333333'>" + v.Country_Name + "</b><br/><b>Year: 2017</b><br/><b>Birth Rate: </b>" + v.Birth_Rate + "<br/><b>CO2 Emission: </b>" + v.Death_Rate)
 							.style("left", (d3.event.pageX) + "px")
 							.style("top", (d3.event.pageY - 28) + "px");
 					})
@@ -535,8 +534,8 @@
 					.data(data)
 					.enter().append("circle")
 					.attr("r", 2.5)
-					.attr("cx", function(v) { return xScale2_2(v.Happiness_Score); })
-					.attr("cy", function(v) { return yScale2_2(v.Fertility_Rate); })
+					.attr("cx", function(v) { return xScale2_2(v.Death_Rate); })
+					.attr("cy", function(v) { return yScale2_2(v.Birth_Rate); })
 					.attr("class", "line_2")
 					.attr('id', function(v) { return 'point_2_'+v.Region.replace(/\s+/g, '') } )
 					.attr('clip-path', 'url(#clip_2)');
@@ -637,13 +636,13 @@
 				context_2.append("text")
 					.attr("transform", "translate(" + (WIDTH_2/2) + "," + (HEIGHT2_2 + 40) + ")")
 					.style("text-anchor", "middle")
-					.text("Happiness Score");
+					.text("CO2 Emission");
 
 				// Y Axis label
 				vis_2.append("text")
 					.attr("transform", "rotate(-90), translate(" + (-1 * HEIGHT_2 / 2 ) + ", 20)")
 					.style("text-anchor", "middle")
-					.text("Fertility Rate (births per woman)");     
+					.text("Birth Rate");     
 			});
 
 			// Refresh ranges and line graphs on scatter plot section for brushing action
@@ -651,8 +650,8 @@
 				var s = d3.event.selection || xScale2_2.range();
 				xScale_2.domain(s.map(xScale2_2.invert, xScale2_2));
 				points_2.selectAll(".line_2")
-					.attr("cx", function(v) { return xScale_2(v.Happiness_Score); })
-					.attr("cy", function(v) { return yScale_2(v.Fertility_Rate); });
+					.attr("cx", function(v) { return xScale_2(v.Death_Rate); })
+					.attr("cy", function(v) { return yScale_2(v.Birth_Rate); });
 				points_2.select(".axis--x").call(xAxis_2);
 				points_2.select(".grid").call(make_x_gridlines_2()
 						.tickSize(-HEIGHT_2)
