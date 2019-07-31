@@ -142,7 +142,7 @@
 
 
 			// ***************************************************
-			// ********** FERTILITY RATE VS HAPPINESS ************
+			// ********** BIRTH RATE VS DEATH RATE ************
 			// ***************************************************
 
 			// ******** Variable definition *********	
@@ -212,10 +212,10 @@
 			// Source of information
 			d3.csv("https://raw.githubusercontent.com/luwei2/dv_final/master/BR_DR.csv", function(data) {	
 				
-				// Fertility rate and happiness score to number
+				// Birth rate and Death rate to number
 				data.forEach(function(d) {
-					d.Fertility_Rate = +d.Fertility_Rate;
-					d.Happiness_Score = +d.Happiness_Score;
+					d.Birth_Rate = +d.Birth_Rate;
+					d.Death_Rate = +d.Death_Rate;
 				});
 
 				// Nest data based on Region
@@ -224,8 +224,8 @@
 				    .entries(data);
 
 				// Set domain for ranges dynamically based on data
-				xScale_1.domain([d3.min(data, function(d) { return d.Happiness_Score; }) - 0.1, d3.max(data, function(d) { return d.Happiness_Score; }) + 0.1])
-				yScale_1.domain([0, d3.max(data, function(d) { return d.Fertility_Rate; }) + 1]);
+				xScale_1.domain([d3.min(data, function(d) { return d.Death_Rate; }) - 0.1, d3.max(data, function(d) { return d.Death_Rate; }) + 0.1])
+				yScale_1.domain([0, d3.max(data, function(d) { return d.Birth_Rate; }) + 1]);
 				xScale2_1.domain(xScale_1.domain());
 				yScale2_1.domain(yScale_1.domain());
 
@@ -251,8 +251,8 @@
 					.data(data)
 					.enter().append("circle")
 					.attr("r", 4)
-					.attr("cx", function(v) { return xScale_1(v.Happiness_Score); })
-					.attr("cy", function(v) { return yScale_1(v.Fertility_Rate); })
+					.attr("cx", function(v) { return xScale_1(v.Death_Rate); })
+					.attr("cy", function(v) { return yScale_1(v.Birth_Rate); })
 					.attr("class", "line_1")
 					.attr('id', function(v) { return 'point_1_'+v.Region.replace(/\s+/g, ''); } )
 					.attr('clip-path', 'url(#clip_1)')
@@ -260,7 +260,7 @@
 						div_1.transition()
 							.duration(200)
 							.style("opacity", .9);
-						div_1.html("<b style='font-size:12px; color:#333333'>" + v.Country_Name + "</b><br/><b>Year: 2015</b><br/><b>Fertility Rate: </b>" + v.Fertility_Rate + "<br/><b>Happiness Score: </b>" + v.Happiness_Score)
+						div_1.html("<b style='font-size:12px; color:#333333'>" + v.Country_Name + "</b><br/><b>Year: 2017</b><br/><b>Birth Rate: </b>" + v.Birth_Rate + "<br/><b>Death Rate: </b>" + v.Death_Rate)
 							.style("left", (d3.event.pageX) + "px")
 							.style("top", (d3.event.pageY - 28) + "px");
 					})
@@ -275,8 +275,8 @@
 					.data(data)
 					.enter().append("circle")
 					.attr("r", 2.5)
-					.attr("cx", function(v) { return xScale2_1(v.Happiness_Score); })
-					.attr("cy", function(v) { return yScale2_1(v.Fertility_Rate); })
+					.attr("cx", function(v) { return xScale2_1(v.Death_Rate); })
+					.attr("cy", function(v) { return yScale2_1(v.Birth_Rate); })
 					.attr("class", "line_1")
 					.attr('id', function(v) { return 'point_1_'+v.Region.replace(/\s+/g, '') } )
 					.attr('clip-path', 'url(#clip_1)');
@@ -383,7 +383,7 @@
 				vis_1.append("text")
 					.attr("transform", "rotate(-90), translate(" + (-1 * HEIGHT_1 / 2 ) + ", 20)")
 					.style("text-anchor", "middle")
-					.text("Fertility Rate (births per woman)");     
+					.text("Birth Rate");     
 			});
 
 			// Refresh ranges and line graphs on scatter plot section for brushing action
@@ -391,14 +391,15 @@
 				var s = d3.event.selection || xScale2_1.range();
 				xScale_1.domain(s.map(xScale2_1.invert, xScale2_1));
 				points_1.selectAll(".line_1")
-					.attr("cx", function(v) { return xScale_1(v.Happiness_Score); })
-					.attr("cy", function(v) { return yScale_1(v.Fertility_Rate); });
+					.attr("cx", function(v) { return xScale_1(v.Death_Rate); })
+					.attr("cy", function(v) { return yScale_1(v.Birth_Rate); });
 				points_1.select(".axis--x").call(xAxis_1);
 				points_1.select(".grid").call(make_x_gridlines_1()
 						.tickSize(-HEIGHT_1)
 						.tickFormat("")
 					);
 			}
+
 
 			// ***************************************************
 			// ********** FERTILITY RATE VS HAPPINESS ************
