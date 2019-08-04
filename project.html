@@ -47,13 +47,13 @@
 			</div>
 			<div class="section" style="width:100%; height:100%; padding-left:3%; padding-right:1%;">
 				<div style="float: right; width: 70%; text-align: center;">
-					<div style="padding-right: 140px; font-size: 20px; font-weight: bold;">Birth Rate vs CO2 Emissions per capita in 2017<br/></div>
+					<div style="padding-right: 140px; font-size: 20px; font-weight: bold;">Birth Rate vs CO2 Emissions per capita in 2014<br/></div>
 					<svg id="BirthRateVsCO2" width="800" height="500"></svg>
 				</div>
 				<div style="float: left; width: 30%;">
 					<p style="font-size: 50px; font-weight: bold; color:#1a1a1a;">Birth Rate vs CO2 Emissions<br/></p>
 					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Overview</p>
-					<p class="bodyText">The scatterplot on the right shows the relationship between Birth Rate and CO2 Emissions of year 2017. The x-axis refers to CO2 emissions (metric tons per capita) and y-axis is Birth rate, crude (per 1,000 people). Each circle represents a country and the color of each circle differs based on the region of that country.</p>
+					<p class="bodyText">The scatterplot on the right shows the relationship between Birth Rate and CO2 Emissions of year 2014. The x-axis refers to CO2 emissions (metric tons per capita) and y-axis is Birth rate, crude (per 1,000 people). Each circle represents a country and the color of each circle differs based on the region of that country.</p>
 					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Instruction</p>
 					<p class="bodyText">You can filter by clicking on the legend. You can also use the brushing bar at the bottom by holding any of the two extremes and moving the context bar from left to right and viceversa. When mouseover any data point on the chart, you can get the details from tooltip.</p>
 					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Insight</p>
@@ -466,7 +466,7 @@
 						div_2.transition()
 							.duration(200)
 							.style("opacity", .9);
-						div_2.html("<b style='font-size:12px; color:#333333'>" + v.Country_Name + "</b><br/><b>Year: 2017</b><br/><b>Birth Rate: </b>" + v.Birth_Rate + "<br/><b>CO2 Emission: </b>" + v.CO2)
+						div_2.html("<b style='font-size:12px; color:#333333'>" + v.Country_Name + "</b><br/><b>Year: 2014</b><br/><b>Birth Rate: </b>" + v.Birth_Rate + "<br/><b>CO2 Emission: </b>" + v.CO2)
 							.style("left", (d3.event.pageX) + "px")
 							.style("top", (d3.event.pageY - 28) + "px");
 					})
