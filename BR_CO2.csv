@@ -7,7 +7,6 @@ Andorra,AND,Europe and Central Asia,2014,-1,5.832906215
 United Arab Emirates,ARE,Middle East and North Africa,2014,10.202,22.93960631
 Argentina,ARG,Latin America and Caribbean,2014,17.547,4.781507775
 Armenia,ARM,Europe and Central Asia,2014,14.141,1.898719374
-American Samoa,ASM,East Asia and Pacific,2014,17.5,-1
 Antigua and Barbuda,ATG,Latin America and Caribbean,2014,16.519,5.744419956
 Australia,AUS,East Asia and Pacific,2014,13.2,15.38876602
 Austria,AUT,Europe and Central Asia,2014,9.6,6.86986793
@@ -33,7 +32,6 @@ Botswana,BWA,Sub-Saharan Africa,2014,24.541,3.367451334
 Central African Republic,CAF,Sub-Saharan Africa,2014,36.542,0.067357126
 Canada,CAN,North America,2014,10.8,15.15892722
 Switzerland,CHE,Europe and Central Asia,2014,10.4,4.311562994
-Channel Islands,CHI,Europe and Central Asia,2014,9.448,-1
 Chile,CHL,Latin America and Caribbean,2014,13.608,4.6490622
 China,CHN,East Asia and Pacific,2014,12.37,7.543907641
 Cote d'Ivoire,CIV,Sub-Saharan Africa,2014,37.348,0.487688034
@@ -57,7 +55,6 @@ Dominican Republic,DOM,Latin America and Caribbean,2014,20.857,2.11899467
 Algeria,DZA,Middle East and North Africa,2014,24.522,3.735520147
 Ecuador,ECU,Latin America and Caribbean,2014,20.774,2.753266363
 "Egypt, Arab Rep.",EGY,Middle East and North Africa,2014,27.707,2.232732005
-Eritrea,ERI,Sub-Saharan Africa,2014,33.469,-1
 Spain,ESP,Europe and Central Asia,2014,9.2,5.033824487
 Estonia,EST,Europe and Central Asia,2014,10.3,14.84881917
 Ethiopia,ETH,Sub-Saharan Africa,2014,32.806,0.118240576
@@ -79,7 +76,6 @@ Greece,GRC,Europe and Central Asia,2014,8.5,6.180337268
 Grenada,GRD,Latin America and Caribbean,2014,19.16,2.222383427
 Greenland,GRL,Europe and Central Asia,2014,14.3,8.989181988
 Guatemala,GTM,Latin America and Caribbean,2014,25.998,1.151000836
-Guam,GUM,East Asia and Pacific,2014,17.021,-1
 Guyana,GUY,Latin America and Caribbean,2014,20.847,2.632392779
 "Hong Kong SAR, China",HKG,East Asia and Pacific,2014,8.6,6.393600526
 Honduras,HND,Latin America and Caribbean,2014,22.416,1.057648023
@@ -87,7 +83,6 @@ Croatia,HRV,Europe and Central Asia,2014,9.3,3.973804906
 Haiti,HTI,Latin America and Caribbean,2014,24.93,0.271140187
 Hungary,HUN,Europe and Central Asia,2014,9.5,4.265574976
 Indonesia,IDN,East Asia and Pacific,2014,19.705,1.81937838
-Isle of Man,IMN,Europe and Central Asia,2014,-1,-1
 India,IND,South Asia,2014,19.573,1.727670507
 Ireland,IRL,Europe and Central Asia,2014,14.4,7.313939808
 "Iran, Islamic Rep.",IRN,Middle East and North Africa,2014,17.568,8.384101101
@@ -118,9 +113,7 @@ Lithuania,LTU,Europe and Central Asia,2014,10.4,4.378090123
 Luxembourg,LUX,Europe and Central Asia,2014,10.9,17.36212137
 Latvia,LVA,Europe and Central Asia,2014,10.9,3.498192882
 "Macao SAR, China",MAC,East Asia and Pacific,2014,11.734,2.174572354
-St. Martin (French part),MAF,Latin America and Caribbean,2014,15.7,-1
 Morocco,MAR,Middle East and North Africa,2014,20.759,1.750794556
-Monaco,MCO,Europe and Central Asia,2014,-1,-1
 Moldova,MDA,Europe and Central Asia,2014,10.701,1.386829142
 Madagascar,MDG,Sub-Saharan Africa,2014,33.679,0.130420845
 Maldives,MDV,South Asia,2014,19.236,3.068372355
@@ -132,7 +125,6 @@ Malta,MLT,Middle East and North Africa,2014,9.6,5.400613957
 Myanmar,MMR,East Asia and Pacific,2014,18.259,0.41375859
 Montenegro,MNE,Europe and Central Asia,2014,11.691,3.55607179
 Mongolia,MNG,East Asia and Pacific,2014,25.261,7.088025678
-Northern Mariana Islands,MNP,East Asia and Pacific,2014,-1,-1
 Mozambique,MOZ,Sub-Saharan Africa,2014,39.778,0.320578017
 Mauritania,MRT,Sub-Saharan Africa,2014,34.969,0.689388119
 Mauritius,MUS,Sub-Saharan Africa,2014,10.6,3.353110472
@@ -156,11 +148,9 @@ Philippines,PHL,East Asia and Pacific,2014,23.688,1.05114223
 Palau,PLW,East Asia and Pacific,2014,13.7,14.77119029
 Papua New Guinea,PNG,East Asia and Pacific,2014,28.286,0.795074226
 Poland,POL,Europe and Central Asia,2014,9.9,7.517151585
-Puerto Rico,PRI,Latin America and Caribbean,2014,9.7,-1
 "Korea, Dem. People’s Rep.",PRK,East Asia and Pacific,2014,13.919,1.617371103
 Portugal,PRT,Europe and Central Asia,2014,7.9,4.331554028
 Paraguay,PRY,Latin America and Caribbean,2014,21.354,0.864029477
-West Bank and Gaza,PSE,Middle East and North Africa,2014,32.44,-1
 French Polynesia,PYF,East Asia and Pacific,2014,15.781,2.955679873
 Qatar,QAT,Middle East and North Africa,2014,10.483,43.85730795
 Romania,ROU,Europe and Central Asia,2014,10,3.516153691
@@ -173,7 +163,6 @@ Singapore,SGP,East Asia and Pacific,2014,9.8,10.30633191
 Solomon Islands,SLB,East Asia and Pacific,2014,29.871,0.343539796
 Sierra Leone,SLE,Sub-Saharan Africa,2014,36.277,0.186560088
 El Salvador,SLV,Latin America and Caribbean,2014,18.839,0.998428944
-San Marino,SMR,Europe and Central Asia,2014,9.1,-1
 Somalia,SOM,Sub-Saharan Africa,2014,43.961,0.045347231
 Serbia,SRB,Europe and Central Asia,2014,9.3,5.282521917
 South Sudan,SSD,Sub-Saharan Africa,2014,36.7,0.141748232
@@ -207,11 +196,9 @@ Uzbekistan,UZB,Europe and Central Asia,2014,23.3,3.420722746
 St. Vincent and the Grenadines,VCT,Latin America and Caribbean,2014,16.036,1.920054014
 "Venezuela, RB",VEN,Latin America and Caribbean,2014,19.62,6.164731034
 British Virgin Islands,VGB,Latin America and Caribbean,2014,-1,6.198316603
-Virgin Islands (U.S.),VIR,Latin America and Caribbean,2014,13.2,-1
 Vietnam,VNM,East Asia and Pacific,2014,17.129,1.819893977
 Vanuatu,VUT,East Asia and Pacific,2014,26.469,0.583633966
 Samoa,WSM,East Asia and Pacific,2014,25.61,1.030157995
-Kosovo,XKX,Europe and Central Asia,2014,17.4,-1
 "Yemen, Rep.",YEM,Middle East and North Africa,2014,32.775,0.878995612
 South Africa,ZAF,Sub-Saharan Africa,2014,21.594,8.979062348
 Zambia,ZMB,Sub-Saharan Africa,2014,38.771,0.292412222
